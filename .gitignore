@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Model files (they're large!)
+*.pt
+*.pth
+*.weights
+
+# Data
+data/
+kitti/
+yolo/images/
+yolo/labels/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+ENV/
