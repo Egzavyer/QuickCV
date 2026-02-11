@@ -7,6 +7,6 @@ model.train(
     epochs=50,
     imgsz=640,
     batch=16,
-    device=0,  # GPU if available
+    device="cpu",
 )
 model.val()
