@@ -23,6 +23,7 @@ build/
 
 # Data
 data/
+dataset/*
 kitti/
 yolo/images/
 yolo/labels/

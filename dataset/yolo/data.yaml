@@ -1,0 +1,8 @@
+names:
+  - Car
+  - Truck
+  - Pedestrian
+  - Cyclist
+nc: 4
+train: images/train
+val: images/val
