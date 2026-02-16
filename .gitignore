@@ -35,3 +35,6 @@ Thumbs.db
 # Virtual environments
 venv/
 ENV/
+.*
+*.onnx
+*.pt
