@@ -1,0 +1,2063 @@
+Loading yolov8n_640_openvino_model/ for OpenVINO inference...
+Using OpenVINO LATENCY mode for batch=1 inference on CPU...
+Loading yolov8m_320_openvino_model/ for OpenVINO inference...
+Using OpenVINO LATENCY mode for batch=1 inference on CPU...
+
+------------------------------------------------------------------------
+IMAGE: 000004.png
+------------------------------------------------------------------------
+Loading yolov8n_640_openvino_model/ for OpenVINO inference...
+Using OpenVINO LATENCY mode for batch=1 inference on CPU...
+Stage-1 inference time: 176.17 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 0
+Class: Car, Confidence: 0.88, Box: [276.8858947753906, 185.4673309326172, 346.6387023925781, 215.1831512451172]
+Class: Car, Confidence: 0.85, Box: [363.4297180175781, 183.92544555664062, 406.8807678222656, 205.06576538085938]
+
+------------------------------------------------------------------------
+IMAGE: 000009.png
+------------------------------------------------------------------------
+Stage-1 inference time: 89.26 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 0
+Class: Car, Confidence: 0.91, Box: [602.6383666992188, 176.2706756591797, 657.5718994140625, 228.68414306640625]
+Class: Car, Confidence: 0.80, Box: [573.3223266601562, 176.97354125976562, 595.3656616210938, 192.83966064453125]
+
+------------------------------------------------------------------------
+IMAGE: 000013.png
+------------------------------------------------------------------------
+Stage-1 inference time: 88.91 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Car, Confidence: 0.93, Box: [452.1720886230469, 185.29173278808594, 534.470703125, 247.17877197265625]
+
+------------------------------------------------------------------------
+IMAGE: 000017.png
+------------------------------------------------------------------------
+Stage-1 inference time: 88.78 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Car, Confidence: 0.89, Box: [728.6473388671875, 172.4357452392578, 789.0858764648438, 198.78839111328125]
+
+------------------------------------------------------------------------
+IMAGE: 000021.png
+------------------------------------------------------------------------
+Stage-1 inference time: 83.44 ms
+Stage-1 detections kept after filtering: 8
+Escalated detections: 3
+Class: Car, Confidence: 0.92, Box: [359.275390625, 174.77268981933594, 515.0093994140625, 272.67120361328125]
+Class: Car, Confidence: 0.89, Box: [447.5500793457031, 161.1776580810547, 557.6879272460938, 247.130615234375]
+Class: Car, Confidence: 0.89, Box: [534.333740234375, 168.47442626953125, 596.7259521484375, 216.93663024902344]
+Class: Car, Confidence: 0.85, Box: [725.3029174804688, 168.2205352783203, 791.468017578125, 213.7794952392578]
+Class: Car, Confidence: 0.74, Box: [709.4804077148438, 164.43931579589844, 763.203369140625, 206.45460510253906]
+Class: Cyclist, Confidence: 0.63, Box: [1067.83251953125, 170.81338500976562, 1241.8758544921875, 373.514892578125]
+Class: Car, Confidence: 0.47, Box: [559.0341186523438, 167.4415740966797, 603.9738159179688, 208.96482849121094]
+Class: Car, Confidence: 0.38, Box: [594.4620971679688, 167.42124938964844, 618.8497314453125, 189.8502655029297]
+Loading yolov8m_320_openvino_model/ for OpenVINO inference...
+Using OpenVINO LATENCY mode for batch=1 inference on CPU...
+
+Escalated stage-1 detection #5 (Cyclist, conf=0.6265)
+Crop box used for stage-2: [np.int64(1016), np.int64(119), 1242, 375] (pad=51)
+Stage-2 inference time: 306.71 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Cyclist (0.6265) because stage2_no_detection.
+
+Escalated stage-1 detection #6 (Car, conf=0.4727)
+Crop box used for stage-2: [np.int64(527), np.int64(135), np.int64(635), np.int64(240)] (pad=32)
+Stage-2 inference time: 93.56 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.4727) because stage2_no_detection.
+
+Escalated stage-1 detection #7 (Car, conf=0.3842)
+Crop box used for stage-2: [np.int64(562), np.int64(135), np.int64(650), np.int64(221)] (pad=32)
+Stage-2 inference time: 95.07 ms
+Stage-2 best detection: Car (conf=0.4757, delta=+0.0915)
+Final decision: Car (0.4757) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000026.png
+------------------------------------------------------------------------
+Stage-1 inference time: 74.19 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 1
+Class: Truck, Confidence: 0.93, Box: [632.6924438476562, 151.8968505859375, 706.3890380859375, 210.6221923828125]
+Class: Car, Confidence: 0.59, Box: [554.0983276367188, 179.71261596679688, 573.7236938476562, 193.93931579589844]
+
+Escalated stage-1 detection #1 (Car, conf=0.5894)
+Crop box used for stage-2: [np.int64(522), np.int64(147), np.int64(605), np.int64(225)] (pad=32)
+Stage-2 inference time: 98.69 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.5894) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000029.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.04 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Car, Confidence: 0.87, Box: [651.3382568359375, 174.0686492919922, 688.6090698242188, 202.88072204589844]
+
+------------------------------------------------------------------------
+IMAGE: 000045.png
+------------------------------------------------------------------------
+Stage-1 inference time: 73.41 ms
+Stage-1 detections kept after filtering: 6
+Escalated detections: 1
+Class: Car, Confidence: 0.91, Box: [73.25592803955078, 191.43252563476562, 273.4229736328125, 276.4554443359375]
+Class: Car, Confidence: 0.91, Box: [269.97607421875, 177.52194213867188, 376.96380615234375, 241.73313903808594]
+Class: Car, Confidence: 0.85, Box: [394.123779296875, 178.60928344726562, 458.1308898925781, 220.64447021484375]
+Class: Car, Confidence: 0.84, Box: [344.47357177734375, 185.4275360107422, 422.09393310546875, 229.1022491455078]
+Class: Car, Confidence: 0.77, Box: [454.2925720214844, 181.4605255126953, 499.2394714355469, 209.97767639160156]
+Class: Car, Confidence: 0.34, Box: [479.15338134765625, 180.7391815185547, 517.1751708984375, 205.87966918945312]
+
+Escalated stage-1 detection #5 (Car, conf=0.3384)
+Crop box used for stage-2: [np.int64(447), np.int64(148), np.int64(549), np.int64(237)] (pad=32)
+Stage-2 inference time: 97.30 ms
+Stage-2 best detection: Car (conf=0.8447, delta=+0.5064)
+Final decision: Car (0.8447) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000048.png
+------------------------------------------------------------------------
+Stage-1 inference time: 68.62 ms
+Stage-1 detections kept after filtering: 5
+Escalated detections: 5
+Class: Pedestrian, Confidence: 0.65, Box: [683.3284912109375, 160.71038818359375, 714.68359375, 238.74679565429688]
+Class: Cyclist, Confidence: 0.62, Box: [604.02197265625, 161.12904357910156, 620.8407592773438, 204.48460388183594]
+Class: Pedestrian, Confidence: 0.61, Box: [446.58837890625, 163.1051025390625, 478.1552734375, 247.27024841308594]
+Class: Pedestrian, Confidence: 0.59, Box: [660.1016845703125, 160.23316955566406, 687.27587890625, 237.1063995361328]
+Class: Cyclist, Confidence: 0.36, Box: [559.054443359375, 162.9492645263672, 582.88134765625, 209.7783966064453]
+
+Escalated stage-1 detection #0 (Pedestrian, conf=0.6502)
+Crop box used for stage-2: [np.int64(651), np.int64(128), np.int64(746), np.int64(270)] (pad=32)
+Stage-2 inference time: 94.31 ms
+Stage-2 best detection: Pedestrian (conf=0.8922, delta=+0.2420)
+Final decision: Pedestrian (0.8922) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #1 (Cyclist, conf=0.6224)
+Crop box used for stage-2: [np.int64(572), np.int64(129), np.int64(652), np.int64(236)] (pad=32)
+Stage-2 inference time: 91.14 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Cyclist (0.6224) because stage2_no_detection.
+
+Escalated stage-1 detection #2 (Pedestrian, conf=0.6087)
+Crop box used for stage-2: [np.int64(414), np.int64(131), np.int64(510), np.int64(279)] (pad=32)
+Stage-2 inference time: 95.35 ms
+Stage-2 best detection: Pedestrian (conf=0.7909, delta=+0.1822)
+Final decision: Pedestrian (0.7909) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #3 (Pedestrian, conf=0.5897)
+Crop box used for stage-2: [np.int64(628), np.int64(128), np.int64(719), np.int64(269)] (pad=32)
+Stage-2 inference time: 94.69 ms
+Stage-2 best detection: Pedestrian (conf=0.8863, delta=+0.2966)
+Final decision: Pedestrian (0.8863) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #4 (Cyclist, conf=0.3609)
+Crop box used for stage-2: [np.int64(527), np.int64(130), np.int64(614), np.int64(241)] (pad=32)
+Stage-2 inference time: 93.61 ms
+Stage-2 best detection: Pedestrian (conf=0.2660, delta=-0.0949)
+Final decision: Cyclist (0.3609) | reason=kept_stage1_similar | stage1=Cyclist -> stage2=Pedestrian
+
+------------------------------------------------------------------------
+IMAGE: 000053.png
+------------------------------------------------------------------------
+Stage-1 inference time: 73.83 ms
+Stage-1 detections kept after filtering: 5
+Escalated detections: 0
+Class: Car, Confidence: 0.94, Box: [174.16342163085938, 175.88194274902344, 429.7998962402344, 353.5530090332031]
+Class: Car, Confidence: 0.92, Box: [704.7800903320312, 184.92791748046875, 830.061279296875, 270.044189453125]
+Class: Car, Confidence: 0.91, Box: [447.40521240234375, 178.72091674804688, 520.5149536132812, 231.652587890625]
+Class: Car, Confidence: 0.86, Box: [651.9721069335938, 178.58412170410156, 706.8392944335938, 217.5939483642578]
+Class: Car, Confidence: 0.84, Box: [499.1061706542969, 174.1051788330078, 547.8742065429688, 215.26612854003906]
+
+------------------------------------------------------------------------
+IMAGE: 000058.png
+------------------------------------------------------------------------
+Stage-1 inference time: 71.70 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Pedestrian, Confidence: 0.90, Box: [404.7467346191406, 163.4303741455078, 499.376953125, 328.8392028808594]
+
+------------------------------------------------------------------------
+IMAGE: 000064.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.08 ms
+Stage-1 detections kept after filtering: 5
+Escalated detections: 1
+Class: Truck, Confidence: 0.95, Box: [817.9874267578125, 54.33329772949219, 1113.6881103515625, 265.4423522949219]
+Class: Car, Confidence: 0.92, Box: [731.3322143554688, 180.66213989257812, 883.0155639648438, 275.1001281738281]
+Class: Car, Confidence: 0.87, Box: [658.2860107421875, 179.52713012695312, 711.583984375, 219.06747436523438]
+Class: Car, Confidence: 0.76, Box: [715.1849975585938, 176.08436584472656, 760.3410034179688, 203.86572265625]
+Class: Car, Confidence: 0.38, Box: [627.6984252929688, 176.49880981445312, 648.2197265625, 191.79307556152344]
+
+Escalated stage-1 detection #4 (Car, conf=0.3764)
+Crop box used for stage-2: [np.int64(595), np.int64(144), np.int64(680), np.int64(223)] (pad=32)
+Stage-2 inference time: 91.42 ms
+Stage-2 best detection: Car (conf=0.9166, delta=+0.5402)
+Final decision: Car (0.9166) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000066.png
+------------------------------------------------------------------------
+Stage-1 inference time: 70.47 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 0
+Class: Car, Confidence: 0.87, Box: [591.6572875976562, 171.01852416992188, 637.2745361328125, 199.40040588378906]
+Class: Car, Confidence: 0.85, Box: [672.0787963867188, 171.16966247558594, 711.4254760742188, 206.34231567382812]
+
+------------------------------------------------------------------------
+IMAGE: 000076.png
+------------------------------------------------------------------------
+Stage-1 inference time: 73.82 ms
+Stage-1 detections kept after filtering: 9
+Escalated detections: 8
+Class: Pedestrian, Confidence: 0.83, Box: [133.0861053466797, 187.73001098632812, 278.4249267578125, 372.8484191894531]
+Class: Pedestrian, Confidence: 0.65, Box: [580.6594848632812, 161.8725128173828, 610.4017333984375, 238.11668395996094]
+Class: Pedestrian, Confidence: 0.64, Box: [956.1170654296875, 159.41970825195312, 1016.6937866210938, 286.5869140625]
+Class: Cyclist, Confidence: 0.64, Box: [409.928466796875, 167.18093872070312, 491.3228759765625, 290.4939270019531]
+Class: Pedestrian, Confidence: 0.45, Box: [554.2979736328125, 161.81613159179688, 576.2053833007812, 223.51637268066406]
+Class: Pedestrian, Confidence: 0.42, Box: [517.996337890625, 163.67051696777344, 544.9984741210938, 231.7906494140625]
+Class: Pedestrian, Confidence: 0.39, Box: [431.6348571777344, 170.0923614501953, 491.7720947265625, 283.588134765625]
+Class: Pedestrian, Confidence: 0.29, Box: [824.2959594726562, 147.49444580078125, 861.3985595703125, 244.2547607421875]
+Class: Pedestrian, Confidence: 0.26, Box: [945.0745849609375, 155.63560485839844, 1002.1263427734375, 285.4942321777344]
+
+Escalated stage-1 detection #1 (Pedestrian, conf=0.6453)
+Crop box used for stage-2: [np.int64(548), np.int64(129), np.int64(642), np.int64(270)] (pad=32)
+Stage-2 inference time: 99.49 ms
+Stage-2 best detection: Pedestrian (conf=0.8943, delta=+0.2490)
+Final decision: Pedestrian (0.8943) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #2 (Pedestrian, conf=0.6374)
+Crop box used for stage-2: [np.int64(924), np.int64(127), np.int64(1048), np.int64(318)] (pad=32)
+Stage-2 inference time: 93.87 ms
+Stage-2 best detection: Pedestrian (conf=0.3525, delta=-0.2849)
+Final decision: Pedestrian (0.3525) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #3 (Cyclist, conf=0.6373)
+Crop box used for stage-2: [np.int64(377), np.int64(135), np.int64(523), np.int64(322)] (pad=32)
+Stage-2 inference time: 94.44 ms
+Stage-2 best detection: Cyclist (conf=0.8466, delta=+0.2093)
+Final decision: Cyclist (0.8466) | reason=agree | stage1=Cyclist -> stage2=Cyclist
+
+Escalated stage-1 detection #4 (Pedestrian, conf=0.4487)
+Crop box used for stage-2: [np.int64(522), np.int64(129), np.int64(608), np.int64(255)] (pad=32)
+Stage-2 inference time: 95.92 ms
+Stage-2 best detection: Pedestrian (conf=0.8909, delta=+0.4421)
+Final decision: Pedestrian (0.8909) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #5 (Pedestrian, conf=0.4179)
+Crop box used for stage-2: [np.int64(485), np.int64(131), np.int64(576), np.int64(263)] (pad=32)
+Stage-2 inference time: 94.73 ms
+Stage-2 best detection: Pedestrian (conf=0.8373, delta=+0.4194)
+Final decision: Pedestrian (0.8373) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #6 (Pedestrian, conf=0.3943)
+Crop box used for stage-2: [np.int64(399), np.int64(138), np.int64(523), np.int64(315)] (pad=32)
+Stage-2 inference time: 91.68 ms
+Stage-2 best detection: Cyclist (conf=0.8410, delta=+0.4467)
+Final decision: Pedestrian (0.3943) | reason=kept_stage1_similar | stage1=Pedestrian -> stage2=Cyclist
+
+Escalated stage-1 detection #7 (Pedestrian, conf=0.2862)
+Crop box used for stage-2: [np.int64(792), np.int64(115), np.int64(893), np.int64(276)] (pad=32)
+Stage-2 inference time: 91.42 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Pedestrian (0.2862) because stage2_no_detection.
+
+Escalated stage-1 detection #8 (Pedestrian, conf=0.2649)
+Crop box used for stage-2: [np.int64(913), np.int64(123), np.int64(1034), np.int64(317)] (pad=32)
+Stage-2 inference time: 93.85 ms
+Stage-2 best detection: Pedestrian (conf=0.8262, delta=+0.5613)
+Final decision: Pedestrian (0.8262) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+------------------------------------------------------------------------
+IMAGE: 000079.png
+------------------------------------------------------------------------
+Stage-1 inference time: 70.08 ms
+Stage-1 detections kept after filtering: 5
+Escalated detections: 0
+Class: Car, Confidence: 0.94, Box: [354.3967590332031, 181.76138305664062, 571.5833129882812, 303.502685546875]
+Class: Car, Confidence: 0.93, Box: [1.0282920598983765, 184.5555877685547, 328.6028137207031, 330.2010192871094]
+Class: Truck, Confidence: 0.92, Box: [15.68223762512207, 83.50456237792969, 450.4542236328125, 265.0600891113281]
+Class: Car, Confidence: 0.86, Box: [700.1926879882812, 171.6316680908203, 741.4785766601562, 200.6063690185547]
+Class: Car, Confidence: 0.78, Box: [668.61962890625, 174.91233825683594, 699.5532836914062, 195.81764221191406]
+
+------------------------------------------------------------------------
+IMAGE: 000083.png
+------------------------------------------------------------------------
+Stage-1 inference time: 76.65 ms
+Stage-1 detections kept after filtering: 7
+Escalated detections: 2
+Class: Car, Confidence: 0.93, Box: [366.0304870605469, 182.8104248046875, 503.4462585449219, 278.5604553222656]
+Class: Car, Confidence: 0.91, Box: [588.9293823242188, 170.42076110839844, 642.547607421875, 221.35665893554688]
+Class: Car, Confidence: 0.90, Box: [517.96923828125, 169.08059692382812, 573.5657348632812, 214.95164489746094]
+Class: Car, Confidence: 0.89, Box: [0.34386396408081055, 198.64002990722656, 348.5234069824219, 372.56768798828125]
+Class: Car, Confidence: 0.82, Box: [460.7900085449219, 174.96519470214844, 516.640380859375, 206.95144653320312]
+Class: Car, Confidence: 0.54, Box: [93.94888305664062, 155.7448272705078, 338.4829406738281, 292.293701171875]
+Class: Car, Confidence: 0.30, Box: [554.9812622070312, 172.37974548339844, 596.8466186523438, 199.11459350585938]
+
+Escalated stage-1 detection #5 (Car, conf=0.5402)
+Crop box used for stage-2: [np.int64(32), np.int64(94), np.int64(399), np.int64(353)] (pad=61)
+Stage-2 inference time: 93.44 ms
+Stage-2 best detection: Car (conf=0.8814, delta=+0.3413)
+Final decision: Car (0.8814) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #6 (Car, conf=0.2984)
+Crop box used for stage-2: [np.int64(522), np.int64(140), np.int64(628), np.int64(231)] (pad=32)
+Stage-2 inference time: 97.23 ms
+Stage-2 best detection: Car (conf=0.8698, delta=+0.5715)
+Final decision: Car (0.8698) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000094.png
+------------------------------------------------------------------------
+Stage-1 inference time: 72.34 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Car, Confidence: 0.92, Box: [659.3453979492188, 191.41937255859375, 750.8103637695312, 256.10400390625]
+
+------------------------------------------------------------------------
+IMAGE: 000100.png
+------------------------------------------------------------------------
+Stage-1 inference time: 71.68 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 0
+Class: Pedestrian, Confidence: 0.81, Box: [359.9300537109375, 178.95314025878906, 403.08740234375, 284.5992126464844]
+Class: Cyclist, Confidence: 0.75, Box: [682.2486572265625, 165.86322021484375, 713.5037841796875, 238.7995147705078]
+
+------------------------------------------------------------------------
+IMAGE: 000103.png
+------------------------------------------------------------------------
+Stage-1 inference time: 70.90 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Pedestrian, Confidence: 0.82, Box: [867.7997436523438, 153.23683166503906, 924.373291015625, 295.32562255859375]
+
+------------------------------------------------------------------------
+IMAGE: 000112.png
+------------------------------------------------------------------------
+Stage-1 inference time: 73.52 ms
+Stage-1 detections kept after filtering: 11
+Escalated detections: 2
+Class: Car, Confidence: 0.93, Box: [0.0, 176.3377227783203, 191.7876739501953, 339.67333984375]
+Class: Car, Confidence: 0.92, Box: [1076.4290771484375, 149.73526000976562, 1241.8380126953125, 277.8307189941406]
+Class: Car, Confidence: 0.92, Box: [1.9763365983963013, 161.182861328125, 331.2668762207031, 299.4396057128906]
+Class: Car, Confidence: 0.84, Box: [229.7532958984375, 168.39352416992188, 438.0848693847656, 249.04246520996094]
+Class: Car, Confidence: 0.78, Box: [139.27842712402344, 172.34335327148438, 367.13409423828125, 265.9027099609375]
+Class: Car, Confidence: 0.78, Box: [287.0703125, 173.78045654296875, 461.29638671875, 235.60353088378906]
+Class: Car, Confidence: 0.73, Box: [662.9065551757812, 170.199951171875, 763.2109985351562, 208.4680633544922]
+Class: Car, Confidence: 0.73, Box: [0.0, 188.66253662109375, 75.77864837646484, 372.34344482421875]
+Class: Car, Confidence: 0.71, Box: [447.69696044921875, 173.77745056152344, 546.25830078125, 204.9622344970703]
+Class: Car, Confidence: 0.60, Box: [974.7449340820312, 162.814697265625, 1135.923828125, 226.47369384765625]
+Class: Car, Confidence: 0.47, Box: [682.8345947265625, 173.858642578125, 781.4359741210938, 213.55628967285156]
+
+Escalated stage-1 detection #9 (Car, conf=0.6044)
+Crop box used for stage-2: [np.int64(934), np.int64(122), np.int64(1175), np.int64(266)] (pad=40)
+Stage-2 inference time: 95.26 ms
+Stage-2 best detection: Car (conf=0.8566, delta=+0.2521)
+Final decision: Car (0.8566) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #10 (Car, conf=0.4654)
+Crop box used for stage-2: [np.int64(650), np.int64(141), np.int64(813), np.int64(245)] (pad=32)
+Stage-2 inference time: 93.79 ms
+Stage-2 best detection: Car (conf=0.9137, delta=+0.4483)
+Final decision: Car (0.9137) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000115.png
+------------------------------------------------------------------------
+Stage-1 inference time: 75.55 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Car, Confidence: 0.82, Box: [462.93414306640625, 181.251708984375, 524.9071655273438, 204.00477600097656]
+
+------------------------------------------------------------------------
+IMAGE: 000120.png
+------------------------------------------------------------------------
+Stage-1 inference time: 73.51 ms
+Stage-1 detections kept after filtering: 9
+Escalated detections: 2
+Class: Car, Confidence: 0.93, Box: [349.7783508300781, 184.97032165527344, 486.3110656738281, 280.85455322265625]
+Class: Car, Confidence: 0.93, Box: [51.86001968383789, 199.70350646972656, 399.6941833496094, 373.2906799316406]
+Class: Car, Confidence: 0.91, Box: [810.9178466796875, 167.4047393798828, 994.34814453125, 265.60577392578125]
+Class: Car, Confidence: 0.89, Box: [450.4866027832031, 189.57469177246094, 531.6378784179688, 245.95408630371094]
+Class: Car, Confidence: 0.86, Box: [664.5782470703125, 181.35049438476562, 723.0244140625, 228.2299041748047]
+Class: Car, Confidence: 0.85, Box: [487.8758239746094, 184.6243438720703, 548.7020263671875, 231.0095977783203]
+Class: Car, Confidence: 0.74, Box: [0.11536674946546555, 210.38648986816406, 117.9258804321289, 373.5259704589844]
+Class: Car, Confidence: 0.66, Box: [522.9589233398438, 183.02769470214844, 568.2302856445312, 215.0970458984375]
+Class: Car, Confidence: 0.60, Box: [712.0662231445312, 174.70712280273438, 781.8820190429688, 212.5200653076172]
+
+Escalated stage-1 detection #7 (Car, conf=0.6622)
+Crop box used for stage-2: [np.int64(490), np.int64(151), np.int64(600), np.int64(247)] (pad=32)
+Stage-2 inference time: 98.95 ms
+Stage-2 best detection: Car (conf=0.7452, delta=+0.0830)
+Final decision: Car (0.7452) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #8 (Car, conf=0.6002)
+Crop box used for stage-2: [np.int64(680), np.int64(142), np.int64(813), np.int64(244)] (pad=32)
+Stage-2 inference time: 92.88 ms
+Stage-2 best detection: Car (conf=0.9202, delta=+0.3200)
+Final decision: Car (0.9202) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000125.png
+------------------------------------------------------------------------
+Stage-1 inference time: 64.83 ms
+Stage-1 detections kept after filtering: 6
+Escalated detections: 1
+Class: Car, Confidence: 0.97, Box: [518.5631103515625, 165.31996154785156, 739.9271240234375, 372.4148864746094]
+Class: Car, Confidence: 0.91, Box: [207.1806640625, 191.63204956054688, 310.18670654296875, 223.87599182128906]
+Class: Car, Confidence: 0.87, Box: [60.937538146972656, 201.61204528808594, 144.29054260253906, 232.2112274169922]
+Class: Car, Confidence: 0.86, Box: [329.00079345703125, 184.9924774169922, 402.12738037109375, 214.37416076660156]
+Class: Car, Confidence: 0.81, Box: [424.5290222167969, 180.9934844970703, 463.4630432128906, 201.66758728027344]
+Class: Car, Confidence: 0.30, Box: [378.2535095214844, 181.98500061035156, 418.5650634765625, 203.0890655517578]
+
+Escalated stage-1 detection #5 (Car, conf=0.2971)
+Crop box used for stage-2: [np.int64(346), np.int64(149), np.int64(450), np.int64(235)] (pad=32)
+Stage-2 inference time: 87.53 ms
+Stage-2 best detection: Car (conf=0.8919, delta=+0.5947)
+Final decision: Car (0.8919) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000141.png
+------------------------------------------------------------------------
+Stage-1 inference time: 80.01 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Car, Confidence: 0.93, Box: [402.83782958984375, 185.60260009765625, 528.9298095703125, 264.04986572265625]
+
+------------------------------------------------------------------------
+IMAGE: 000158.png
+------------------------------------------------------------------------
+Stage-1 inference time: 72.41 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Car, Confidence: 0.83, Box: [1048.69775390625, 179.34744262695312, 1183.3253173828125, 217.13681030273438]
+
+------------------------------------------------------------------------
+IMAGE: 000159.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.85 ms
+Stage-1 detections kept after filtering: 10
+Escalated detections: 5
+Class: Car, Confidence: 0.94, Box: [0.5908400416374207, 205.95523071289062, 270.3397521972656, 373.4125671386719]
+Class: Car, Confidence: 0.92, Box: [169.13160705566406, 187.8212127685547, 402.2936096191406, 316.26751708984375]
+Class: Car, Confidence: 0.87, Box: [746.3798828125, 160.1453399658203, 892.2406616210938, 262.32806396484375]
+Class: Car, Confidence: 0.87, Box: [526.363525390625, 171.9299774169922, 569.9830322265625, 203.25074768066406]
+Class: Car, Confidence: 0.84, Box: [723.830322265625, 172.2889862060547, 805.546142578125, 231.1075439453125]
+Class: Car, Confidence: 0.70, Box: [706.1986694335938, 170.84335327148438, 769.1328735351562, 215.29129028320312]
+Class: Car, Confidence: 0.41, Box: [554.8145751953125, 171.67526245117188, 588.8648071289062, 197.15957641601562]
+Class: Car, Confidence: 0.38, Box: [687.985107421875, 170.88771057128906, 723.2498779296875, 199.0386199951172]
+Class: Car, Confidence: 0.34, Box: [592.539794921875, 170.953857421875, 614.1815795898438, 188.04425048828125]
+Class: Car, Confidence: 0.27, Box: [698.0308227539062, 171.27828979492188, 739.8790283203125, 206.68853759765625]
+
+Escalated stage-1 detection #5 (Car, conf=0.6986)
+Crop box used for stage-2: [np.int64(674), np.int64(138), np.int64(801), np.int64(247)] (pad=32)
+Stage-2 inference time: 90.76 ms
+Stage-2 best detection: Car (conf=0.8443, delta=+0.1457)
+Final decision: Car (0.8443) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #6 (Car, conf=0.4121)
+Crop box used for stage-2: [np.int64(522), np.int64(139), np.int64(620), np.int64(229)] (pad=32)
+Stage-2 inference time: 93.07 ms
+Stage-2 best detection: Car (conf=0.9412, delta=+0.5291)
+Final decision: Car (0.9412) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #7 (Car, conf=0.3779)
+Crop box used for stage-2: [np.int64(655), np.int64(138), np.int64(755), np.int64(231)] (pad=32)
+Stage-2 inference time: 92.94 ms
+Stage-2 best detection: Car (conf=0.6343, delta=+0.2564)
+Final decision: Car (0.6343) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #8 (Car, conf=0.3409)
+Crop box used for stage-2: [np.int64(560), np.int64(138), np.int64(646), np.int64(220)] (pad=32)
+Stage-2 inference time: 93.49 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.3409) because stage2_no_detection.
+
+Escalated stage-1 detection #9 (Car, conf=0.2713)
+Crop box used for stage-2: [np.int64(666), np.int64(139), np.int64(771), np.int64(238)] (pad=32)
+Stage-2 inference time: 95.83 ms
+Stage-2 best detection: Car (conf=0.7932, delta=+0.5219)
+Final decision: Car (0.7932) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000160.png
+------------------------------------------------------------------------
+Stage-1 inference time: 74.49 ms
+Stage-1 detections kept after filtering: 4
+Escalated detections: 1
+Class: Car, Confidence: 0.92, Box: [494.7823486328125, 183.00482177734375, 547.5282592773438, 225.57066345214844]
+Class: Car, Confidence: 0.90, Box: [590.861572265625, 179.184814453125, 633.0950317382812, 220.2103729248047]
+Class: Car, Confidence: 0.82, Box: [343.2744140625, 178.30783081054688, 381.56182861328125, 201.53208923339844]
+Class: Car, Confidence: 0.65, Box: [556.6083374023438, 180.37176513671875, 579.416259765625, 200.73162841796875]
+
+Escalated stage-1 detection #3 (Car, conf=0.6550)
+Crop box used for stage-2: [np.int64(524), np.int64(148), np.int64(611), np.int64(232)] (pad=32)
+Stage-2 inference time: 94.67 ms
+Stage-2 best detection: Car (conf=0.8836, delta=+0.2286)
+Final decision: Car (0.8836) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000166.png
+------------------------------------------------------------------------
+Stage-1 inference time: 75.01 ms
+Stage-1 detections kept after filtering: 6
+Escalated detections: 3
+Class: Car, Confidence: 0.89, Box: [570.3717651367188, 168.44493103027344, 617.2230224609375, 214.68283081054688]
+Class: Car, Confidence: 0.85, Box: [0.0, 173.9010467529297, 49.4752082824707, 221.41485595703125]
+Class: Car, Confidence: 0.81, Box: [223.169189453125, 159.97412109375, 275.6279602050781, 190.3560791015625]
+Class: Car, Confidence: 0.55, Box: [293.9521484375, 170.67965698242188, 335.3910217285156, 191.8112030029297]
+Class: Car, Confidence: 0.46, Box: [302.70654296875, 170.26492309570312, 344.05023193359375, 191.62481689453125]
+Class: Car, Confidence: 0.25, Box: [315.0220031738281, 169.2566375732422, 354.0832214355469, 190.37112426757812]
+
+Escalated stage-1 detection #3 (Car, conf=0.5464)
+Crop box used for stage-2: [np.int64(261), np.int64(138), np.int64(367), np.int64(223)] (pad=32)
+Stage-2 inference time: 96.80 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.5464) because stage2_no_detection.
+
+Escalated stage-1 detection #4 (Car, conf=0.4561)
+Crop box used for stage-2: [np.int64(270), np.int64(138), np.int64(376), np.int64(223)] (pad=32)
+Stage-2 inference time: 95.22 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.4561) because stage2_no_detection.
+
+Escalated stage-1 detection #5 (Car, conf=0.2546)
+Crop box used for stage-2: [np.int64(283), np.int64(137), np.int64(386), np.int64(222)] (pad=32)
+Stage-2 inference time: 89.62 ms
+Stage-2 best detection: Car (conf=0.6394, delta=+0.3847)
+Final decision: Car (0.6394) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000169.png
+------------------------------------------------------------------------
+Stage-1 inference time: 72.37 ms
+Stage-1 detections kept after filtering: 18
+Escalated detections: 6
+Class: Car, Confidence: 0.95, Box: [783.9232177734375, 172.76046752929688, 1126.66455078125, 374.3001403808594]
+Class: Car, Confidence: 0.93, Box: [0.025998974218964577, 182.36947631835938, 276.7917785644531, 343.1619567871094]
+Class: Car, Confidence: 0.88, Box: [676.6682739257812, 184.87095642089844, 749.4188232421875, 238.8057403564453]
+Class: Car, Confidence: 0.88, Box: [248.56944274902344, 186.81820678710938, 433.07012939453125, 259.4027404785156]
+Class: Car, Confidence: 0.86, Box: [304.1014404296875, 179.10379028320312, 467.7796325683594, 247.05458068847656]
+Class: Car, Confidence: 0.85, Box: [726.3309326171875, 175.14259338378906, 853.5354614257812, 222.38919067382812]
+Class: Car, Confidence: 0.85, Box: [1.2843434810638428, 166.32794189453125, 281.7251892089844, 299.3661804199219]
+Class: Car, Confidence: 0.84, Box: [632.5687866210938, 178.92340087890625, 659.003173828125, 200.7319793701172]
+Class: Car, Confidence: 0.82, Box: [123.56261444091797, 186.69419860839844, 342.7414245605469, 275.9820251464844]
+Class: Car, Confidence: 0.76, Box: [434.72039794921875, 173.2401123046875, 525.2129516601562, 210.92666625976562]
+Class: Car, Confidence: 0.74, Box: [352.7973327636719, 178.53785705566406, 489.862548828125, 232.73748779296875]
+Class: Car, Confidence: 0.71, Box: [0.16752755641937256, 197.9264678955078, 140.23239135742188, 373.2637939453125]
+Class: Car, Confidence: 0.67, Box: [681.4814453125, 174.2093505859375, 753.9585571289062, 208.54933166503906]
+Class: Car, Confidence: 0.45, Box: [391.93798828125, 175.48431396484375, 504.2333068847656, 220.23358154296875]
+Class: Car, Confidence: 0.34, Box: [677.2918701171875, 180.16342163085938, 751.4862060546875, 224.35031127929688]
+Class: Cyclist, Confidence: 0.28, Box: [573.5518188476562, 175.01194763183594, 583.1028442382812, 198.11941528320312]
+Class: Car, Confidence: 0.27, Box: [475.030517578125, 176.6050567626953, 551.53076171875, 203.39785766601562]
+Class: Car, Confidence: 0.26, Box: [413.8748474121094, 174.69747924804688, 507.6380310058594, 213.95758056640625]
+
+Escalated stage-1 detection #12 (Car, conf=0.6681)
+Crop box used for stage-2: [np.int64(649), np.int64(142), np.int64(785), np.int64(240)] (pad=32)
+Stage-2 inference time: 93.78 ms
+Stage-2 best detection: Car (conf=0.9337, delta=+0.2656)
+Final decision: Car (0.9337) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #13 (Car, conf=0.4536)
+Crop box used for stage-2: [np.int64(359), np.int64(143), np.int64(536), np.int64(252)] (pad=32)
+Stage-2 inference time: 112.99 ms
+Stage-2 best detection: Car (conf=0.9421, delta=+0.4885)
+Final decision: Car (0.9421) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #14 (Car, conf=0.3435)
+Crop box used for stage-2: [np.int64(645), np.int64(148), np.int64(783), np.int64(256)] (pad=32)
+Stage-2 inference time: 94.63 ms
+Stage-2 best detection: Car (conf=0.9348, delta=+0.5913)
+Final decision: Car (0.9348) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #15 (Cyclist, conf=0.2803)
+Crop box used for stage-2: [np.int64(541), np.int64(143), np.int64(615), np.int64(230)] (pad=32)
+Stage-2 inference time: 91.54 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Cyclist (0.2803) because stage2_no_detection.
+
+Escalated stage-1 detection #16 (Car, conf=0.2673)
+Crop box used for stage-2: [np.int64(443), np.int64(144), np.int64(583), np.int64(235)] (pad=32)
+Stage-2 inference time: 95.56 ms
+Stage-2 best detection: Car (conf=0.9301, delta=+0.6627)
+Final decision: Car (0.9301) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #17 (Car, conf=0.2615)
+Crop box used for stage-2: [np.int64(381), np.int64(142), np.int64(539), np.int64(245)] (pad=32)
+Stage-2 inference time: 93.26 ms
+Stage-2 best detection: Car (conf=0.9305, delta=+0.6690)
+Final decision: Car (0.9305) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000172.png
+------------------------------------------------------------------------
+Stage-1 inference time: 72.13 ms
+Stage-1 detections kept after filtering: 9
+Escalated detections: 1
+Class: Car, Confidence: 0.96, Box: [832.204833984375, 172.3566131591797, 1241.442138671875, 373.1009216308594]
+Class: Car, Confidence: 0.92, Box: [1.0590288639068604, 190.65325927734375, 250.41015625, 302.3597717285156]
+Class: Car, Confidence: 0.92, Box: [727.6917724609375, 172.114990234375, 890.9589233398438, 306.299560546875]
+Class: Car, Confidence: 0.92, Box: [254.92996215820312, 179.47560119628906, 376.47308349609375, 244.21505737304688]
+Class: Car, Confidence: 0.90, Box: [656.6651611328125, 164.17457580566406, 709.965576171875, 210.70350646972656]
+Class: Car, Confidence: 0.89, Box: [583.8594360351562, 169.76365661621094, 618.9365234375, 203.52015686035156]
+Class: Car, Confidence: 0.87, Box: [635.2700805664062, 166.1437530517578, 661.956298828125, 193.2393035888672]
+Class: Car, Confidence: 0.81, Box: [710.7954711914062, 173.3304901123047, 810.6514282226562, 252.9532012939453]
+Class: Car, Confidence: 0.54, Box: [629.9173583984375, 165.76490783691406, 658.0764770507812, 192.00799560546875]
+
+Escalated stage-1 detection #8 (Car, conf=0.5420)
+Crop box used for stage-2: [np.int64(597), np.int64(133), np.int64(690), np.int64(224)] (pad=32)
+Stage-2 inference time: 91.00 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.5420) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000179.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.21 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 1
+Class: Car, Confidence: 0.93, Box: [592.7774047851562, 174.66738891601562, 658.8440551757812, 238.8424530029297]
+Class: Pedestrian, Confidence: 0.67, Box: [269.7325439453125, 182.96241760253906, 288.79412841796875, 230.96826171875]
+
+Escalated stage-1 detection #1 (Pedestrian, conf=0.6733)
+Crop box used for stage-2: [np.int64(237), np.int64(150), np.int64(320), np.int64(262)] (pad=32)
+Stage-2 inference time: 90.32 ms
+Stage-2 best detection: Pedestrian (conf=0.2676, delta=-0.4057)
+Final decision: Pedestrian (0.2676) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+------------------------------------------------------------------------
+IMAGE: 000193.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.14 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Pedestrian, Confidence: 0.82, Box: [66.23771667480469, 151.23422241210938, 167.07369995117188, 333.273193359375]
+
+------------------------------------------------------------------------
+IMAGE: 000200.png
+------------------------------------------------------------------------
+Stage-1 inference time: 74.64 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 1
+Class: Car, Confidence: 0.94, Box: [791.8657836914062, 188.2337646484375, 1023.0647583007812, 323.5599060058594]
+Class: Car, Confidence: 0.93, Box: [602.667724609375, 179.1407012939453, 664.3607177734375, 237.25071716308594]
+Class: Pedestrian, Confidence: 0.29, Box: [878.80419921875, 168.28135681152344, 914.9223022460938, 291.3879699707031]
+
+Escalated stage-1 detection #2 (Pedestrian, conf=0.2941)
+Crop box used for stage-2: [np.int64(846), np.int64(136), np.int64(946), np.int64(323)] (pad=32)
+Stage-2 inference time: 96.50 ms
+Stage-2 best detection: Car (conf=0.4663, delta=+0.1723)
+Final decision: Pedestrian (0.2941) | reason=kept_stage1 | stage1=Pedestrian -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000203.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.00 ms
+Stage-1 detections kept after filtering: 4
+Escalated detections: 1
+Class: Cyclist, Confidence: 0.92, Box: [766.3219604492188, 169.609375, 811.333740234375, 250.8437957763672]
+Class: Truck, Confidence: 0.88, Box: [586.9603271484375, 171.4243927001953, 618.4542236328125, 207.641845703125]
+Class: Car, Confidence: 0.72, Box: [360.2180480957031, 193.60269165039062, 402.8527526855469, 215.67611694335938]
+Class: Cyclist, Confidence: 0.34, Box: [102.5779037475586, 185.87786865234375, 129.00816345214844, 222.80731201171875]
+
+Escalated stage-1 detection #3 (Cyclist, conf=0.3442)
+Crop box used for stage-2: [np.int64(70), np.int64(153), np.int64(161), np.int64(254)] (pad=32)
+Stage-2 inference time: 97.89 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Cyclist (0.3442) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000204.png
+------------------------------------------------------------------------
+Stage-1 inference time: 70.15 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 0
+Class: Car, Confidence: 0.90, Box: [600.7300415039062, 176.9422149658203, 628.5535888671875, 205.4130401611328]
+Class: Car, Confidence: 0.88, Box: [192.48052978515625, 193.99327087402344, 290.12713623046875, 238.969482421875]
+Class: Truck, Confidence: 0.81, Box: [634.8017578125, 163.27569580078125, 679.63818359375, 196.4366455078125]
+
+------------------------------------------------------------------------
+IMAGE: 000210.png
+------------------------------------------------------------------------
+Stage-1 inference time: 74.67 ms
+Stage-1 detections kept after filtering: 6
+Escalated detections: 1
+Class: Car, Confidence: 0.93, Box: [0.10298910737037659, 178.420654296875, 154.57513427734375, 321.02166748046875]
+Class: Car, Confidence: 0.90, Box: [127.8710708618164, 194.06582641601562, 285.0132751464844, 271.5215759277344]
+Class: Car, Confidence: 0.90, Box: [375.0952453613281, 182.30783081054688, 444.32257080078125, 221.74916076660156]
+Class: Car, Confidence: 0.88, Box: [238.8102569580078, 179.06008911132812, 363.8426818847656, 249.9900360107422]
+Class: Car, Confidence: 0.77, Box: [421.5479736328125, 182.00489807128906, 474.4356994628906, 213.93875122070312]
+Class: Car, Confidence: 0.32, Box: [496.87237548828125, 176.78012084960938, 530.134033203125, 198.43922424316406]
+
+Escalated stage-1 detection #5 (Car, conf=0.3202)
+Crop box used for stage-2: [np.int64(464), np.int64(144), np.int64(562), np.int64(230)] (pad=32)
+Stage-2 inference time: 90.86 ms
+Stage-2 best detection: Car (conf=0.7238, delta=+0.4036)
+Final decision: Car (0.7238) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000211.png
+------------------------------------------------------------------------
+Stage-1 inference time: 71.59 ms
+Stage-1 detections kept after filtering: 8
+Escalated detections: 2
+Class: Car, Confidence: 0.94, Box: [0.9416189193725586, 185.9777069091797, 307.165771484375, 373.27099609375]
+Class: Car, Confidence: 0.94, Box: [816.4886474609375, 168.69520568847656, 1242.0, 373.06585693359375]
+Class: Car, Confidence: 0.88, Box: [401.35150146484375, 177.545166015625, 483.2264709472656, 232.36082458496094]
+Class: Cyclist, Confidence: 0.85, Box: [475.37554931640625, 163.27871704101562, 511.9613952636719, 248.7988739013672]
+Class: Car, Confidence: 0.84, Box: [638.52490234375, 176.20767211914062, 671.1040649414062, 202.00978088378906]
+Class: Cyclist, Confidence: 0.78, Box: [445.0823059082031, 169.18617248535156, 485.69390869140625, 251.4263153076172]
+Class: Cyclist, Confidence: 0.62, Box: [525.4764404296875, 171.91990661621094, 542.7926025390625, 209.63536071777344]
+Class: Cyclist, Confidence: 0.37, Box: [465.92218017578125, 166.58164978027344, 507.7837219238281, 248.61215209960938]
+
+Escalated stage-1 detection #6 (Cyclist, conf=0.6200)
+Crop box used for stage-2: [np.int64(493), np.int64(139), np.int64(574), np.int64(241)] (pad=32)
+Stage-2 inference time: 93.05 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Cyclist (0.6200) because stage2_no_detection.
+
+Escalated stage-1 detection #7 (Cyclist, conf=0.3715)
+Crop box used for stage-2: [np.int64(433), np.int64(134), np.int64(539), np.int64(280)] (pad=32)
+Stage-2 inference time: 96.74 ms
+Stage-2 best detection: Cyclist (conf=0.6476, delta=+0.2761)
+Final decision: Cyclist (0.6476) | reason=agree | stage1=Cyclist -> stage2=Cyclist
+
+------------------------------------------------------------------------
+IMAGE: 000217.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.36 ms
+Stage-1 detections kept after filtering: 8
+Escalated detections: 2
+Class: Car, Confidence: 0.95, Box: [0.0, 200.41490173339844, 353.82281494140625, 374.1060485839844]
+Class: Car, Confidence: 0.91, Box: [312.86578369140625, 190.69412231445312, 460.1202392578125, 281.06536865234375]
+Class: Car, Confidence: 0.90, Box: [472.01873779296875, 182.92599487304688, 525.5546875, 222.5055694580078]
+Class: Cyclist, Confidence: 0.87, Box: [970.3975830078125, 138.026123046875, 1154.0810546875, 358.71514892578125]
+Class: Car, Confidence: 0.85, Box: [561.512939453125, 177.88937377929688, 594.24609375, 206.00840759277344]
+Class: Cyclist, Confidence: 0.76, Box: [1055.1876220703125, 121.95568084716797, 1239.9061279296875, 306.06585693359375]
+Class: Car, Confidence: 0.69, Box: [504.49322509765625, 178.57814025878906, 545.7393188476562, 211.27383422851562]
+Class: Car, Confidence: 0.26, Box: [536.1856079101562, 177.61155700683594, 559.5668334960938, 200.4028778076172]
+
+Escalated stage-1 detection #6 (Car, conf=0.6873)
+Crop box used for stage-2: [np.int64(472), np.int64(146), np.int64(577), np.int64(243)] (pad=32)
+Stage-2 inference time: 95.33 ms
+Stage-2 best detection: Car (conf=0.7010, delta=+0.0136)
+Final decision: Car (0.7010) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #7 (Car, conf=0.2557)
+Crop box used for stage-2: [np.int64(504), np.int64(145), np.int64(591), np.int64(232)] (pad=32)
+Stage-2 inference time: 91.40 ms
+Stage-2 best detection: Car (conf=0.2687, delta=+0.0130)
+Final decision: Car (0.2687) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000220.png
+------------------------------------------------------------------------
+Stage-1 inference time: 70.45 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 0
+Class: Car, Confidence: 0.76, Box: [527.0238647460938, 178.93104553222656, 563.6361083984375, 197.4637451171875]
+Class: Car, Confidence: 0.73, Box: [717.8099975585938, 176.0663604736328, 738.9913940429688, 195.54177856445312]
+
+------------------------------------------------------------------------
+IMAGE: 000222.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.56 ms
+Stage-1 detections kept after filtering: 7
+Escalated detections: 3
+Class: Car, Confidence: 0.97, Box: [518.25341796875, 165.56100463867188, 739.8026123046875, 372.44354248046875]
+Class: Car, Confidence: 0.87, Box: [343.0250244140625, 182.55117797851562, 453.1833190917969, 217.8960418701172]
+Class: Car, Confidence: 0.85, Box: [177.94000244140625, 194.48121643066406, 262.0849304199219, 225.98391723632812]
+Class: Car, Confidence: 0.81, Box: [447.25177001953125, 179.9575653076172, 500.225830078125, 207.38949584960938]
+Class: Car, Confidence: 0.41, Box: [456.33642578125, 179.09165954589844, 510.7661437988281, 204.920654296875]
+Class: Car, Confidence: 0.35, Box: [341.4371337890625, 185.39389038085938, 403.31494140625, 213.1115264892578]
+Class: Car, Confidence: 0.33, Box: [336.8403015136719, 187.60516357421875, 379.7599182128906, 209.9898681640625]
+
+Escalated stage-1 detection #4 (Car, conf=0.4138)
+Crop box used for stage-2: [np.int64(424), np.int64(147), np.int64(542), np.int64(236)] (pad=32)
+Stage-2 inference time: 91.27 ms
+Stage-2 best detection: Car (conf=0.9227, delta=+0.5089)
+Final decision: Car (0.9227) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #5 (Car, conf=0.3544)
+Crop box used for stage-2: [np.int64(309), np.int64(153), np.int64(435), np.int64(245)] (pad=32)
+Stage-2 inference time: 89.78 ms
+Stage-2 best detection: Car (conf=0.9283, delta=+0.5739)
+Final decision: Car (0.9283) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #6 (Car, conf=0.3277)
+Crop box used for stage-2: [np.int64(304), np.int64(155), np.int64(411), np.int64(241)] (pad=32)
+Stage-2 inference time: 89.77 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.3277) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000226.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.55 ms
+Stage-1 detections kept after filtering: 7
+Escalated detections: 2
+Class: Car, Confidence: 0.94, Box: [729.354248046875, 182.23977661132812, 1040.796875, 371.8702697753906]
+Class: Car, Confidence: 0.90, Box: [3.6871461868286133, 212.6188507080078, 389.383056640625, 374.315185546875]
+Class: Car, Confidence: 0.83, Box: [640.5762939453125, 183.6509552001953, 673.93505859375, 210.15415954589844]
+Class: Car, Confidence: 0.82, Box: [217.05093383789062, 187.6374969482422, 416.7407531738281, 261.87127685546875]
+Class: Car, Confidence: 0.79, Box: [394.20556640625, 184.1995391845703, 507.3684997558594, 226.60960388183594]
+Class: Car, Confidence: 0.69, Box: [19.415311813354492, 194.50816345214844, 323.259765625, 306.8007507324219]
+Class: Car, Confidence: 0.55, Box: [359.1932067871094, 185.99476623535156, 491.9770812988281, 230.97335815429688]
+
+Escalated stage-1 detection #5 (Car, conf=0.6943)
+Crop box used for stage-2: [0, np.int64(118), np.int64(399), 375] (pad=76)
+Stage-2 inference time: 93.08 ms
+Stage-2 best detection: Car (conf=0.9196, delta=+0.2253)
+Final decision: Car (0.9196) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #6 (Car, conf=0.5529)
+Crop box used for stage-2: [np.int64(326), np.int64(152), np.int64(524), np.int64(263)] (pad=33)
+Stage-2 inference time: 89.96 ms
+Stage-2 best detection: Car (conf=0.9483, delta=+0.3954)
+Final decision: Car (0.9483) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000235.png
+------------------------------------------------------------------------
+Stage-1 inference time: 72.11 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 0
+Class: Car, Confidence: 0.92, Box: [59.51108932495117, 196.9415283203125, 256.5731506347656, 285.7509460449219]
+Class: Car, Confidence: 0.90, Box: [588.9200439453125, 175.73097229003906, 616.0601806640625, 202.32679748535156]
+Class: Car, Confidence: 0.87, Box: [403.794921875, 181.3291015625, 451.6666259765625, 216.09974670410156]
+
+------------------------------------------------------------------------
+IMAGE: 000236.png
+------------------------------------------------------------------------
+Stage-1 inference time: 63.95 ms
+Stage-1 detections kept after filtering: 9
+Escalated detections: 3
+Class: Car, Confidence: 0.94, Box: [323.4784240722656, 183.1411590576172, 478.40484619140625, 281.987548828125]
+Class: Car, Confidence: 0.92, Box: [74.4911117553711, 175.02523803710938, 292.6268005371094, 279.4853515625]
+Class: Car, Confidence: 0.91, Box: [480.07025146484375, 183.06800842285156, 543.3113403320312, 226.17037963867188]
+Class: Car, Confidence: 0.86, Box: [0.0, 187.36972045898438, 140.72238159179688, 265.70220947265625]
+Class: Car, Confidence: 0.85, Box: [581.280029296875, 176.26698303222656, 621.8143920898438, 213.77169799804688]
+Class: Car, Confidence: 0.81, Box: [280.4884338378906, 183.25975036621094, 394.8064270019531, 240.36717224121094]
+Class: Car, Confidence: 0.58, Box: [439.75836181640625, 178.0595245361328, 488.67376708984375, 209.9652862548828]
+Class: Car, Confidence: 0.44, Box: [0.02629980631172657, 190.2754669189453, 34.6853141784668, 332.2386474609375]
+Class: Car, Confidence: 0.28, Box: [0.0, 187.0788116455078, 57.66761016845703, 253.25901794433594]
+
+Escalated stage-1 detection #6 (Car, conf=0.5843)
+Crop box used for stage-2: [np.int64(407), np.int64(146), np.int64(520), np.int64(241)] (pad=32)
+Stage-2 inference time: 89.87 ms
+Stage-2 best detection: Car (conf=0.8878, delta=+0.3035)
+Final decision: Car (0.8878) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #7 (Car, conf=0.4432)
+Crop box used for stage-2: [0, np.int64(154), np.int64(70), np.int64(368)] (pad=36)
+Stage-2 inference time: 89.34 ms
+Stage-2 best detection: Car (conf=0.5931, delta=+0.1500)
+Final decision: Car (0.5931) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #8 (Car, conf=0.2759)
+Crop box used for stage-2: [0, np.int64(155), np.int64(89), np.int64(285)] (pad=32)
+Stage-2 inference time: 90.28 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.2759) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000237.png
+------------------------------------------------------------------------
+Stage-1 inference time: 68.60 ms
+Stage-1 detections kept after filtering: 4
+Escalated detections: 1
+Class: Car, Confidence: 0.88, Box: [174.81112670898438, 190.81884765625, 256.10504150390625, 224.4114227294922]
+Class: Truck, Confidence: 0.86, Box: [588.077880859375, 159.63815307617188, 618.1951904296875, 191.4273681640625]
+Class: Car, Confidence: 0.81, Box: [858.5094604492188, 179.96656799316406, 954.0484008789062, 214.84474182128906]
+Class: Car, Confidence: 0.51, Box: [434.5573425292969, 182.496337890625, 462.9963073730469, 201.11705017089844]
+
+Escalated stage-1 detection #3 (Car, conf=0.5120)
+Crop box used for stage-2: [np.int64(402), np.int64(150), np.int64(494), np.int64(233)] (pad=32)
+Stage-2 inference time: 86.80 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.5120) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000244.png
+------------------------------------------------------------------------
+Stage-1 inference time: 70.58 ms
+Stage-1 detections kept after filtering: 11
+Escalated detections: 2
+Class: Car, Confidence: 0.94, Box: [1.0349546670913696, 194.4075927734375, 419.428466796875, 372.78900146484375]
+Class: Car, Confidence: 0.93, Box: [657.3906860351562, 183.9007568359375, 733.52685546875, 244.75802612304688]
+Class: Car, Confidence: 0.93, Box: [727.11279296875, 190.83786010742188, 1007.936279296875, 375.0]
+Class: Car, Confidence: 0.92, Box: [296.3278503417969, 185.61160278320312, 489.8433532714844, 336.8936462402344]
+Class: Car, Confidence: 0.90, Box: [414.6886291503906, 186.14923095703125, 524.6094970703125, 273.88861083984375]
+Class: Car, Confidence: 0.90, Box: [685.7147216796875, 182.89443969726562, 800.636962890625, 271.77349853515625]
+Class: Car, Confidence: 0.89, Box: [947.8845825195312, 212.72396850585938, 1241.365478515625, 374.4454040527344]
+Class: Car, Confidence: 0.87, Box: [509.9136962890625, 181.3037567138672, 561.8385620117188, 224.5919952392578]
+Class: Car, Confidence: 0.83, Box: [535.3603515625, 174.93988037109375, 582.4657592773438, 215.25225830078125]
+Class: Car, Confidence: 0.58, Box: [558.6625366210938, 176.2724609375, 600.7255859375, 207.95472717285156]
+Class: Car, Confidence: 0.51, Box: [606.6117553710938, 178.67300415039062, 636.7536010742188, 200.84332275390625]
+
+Escalated stage-1 detection #9 (Car, conf=0.5808)
+Crop box used for stage-2: [np.int64(526), np.int64(144), np.int64(632), np.int64(239)] (pad=32)
+Stage-2 inference time: 88.27 ms
+Stage-2 best detection: Car (conf=0.4784, delta=-0.1024)
+Final decision: Car (0.4784) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #10 (Car, conf=0.5150)
+Crop box used for stage-2: [np.int64(574), np.int64(146), np.int64(668), np.int64(232)] (pad=32)
+Stage-2 inference time: 99.62 ms
+Stage-2 best detection: Pedestrian (conf=0.3457, delta=-0.1693)
+Final decision: Car (0.5150) | reason=kept_stage1 | stage1=Car -> stage2=Pedestrian
+
+------------------------------------------------------------------------
+IMAGE: 000254.png
+------------------------------------------------------------------------
+Stage-1 inference time: 66.14 ms
+Stage-1 detections kept after filtering: 10
+Escalated detections: 4
+Class: Car, Confidence: 0.94, Box: [29.01666259765625, 205.95498657226562, 299.24951171875, 346.3911437988281]
+Class: Car, Confidence: 0.93, Box: [384.78643798828125, 191.25314331054688, 499.42449951171875, 278.3456726074219]
+Class: Car, Confidence: 0.90, Box: [228.7088165283203, 195.2574005126953, 385.0976867675781, 287.50970458984375]
+Class: Car, Confidence: 0.90, Box: [1110.931884765625, 150.3251190185547, 1242.0, 257.64532470703125]
+Class: Cyclist, Confidence: 0.89, Box: [816.6611938476562, 176.942626953125, 946.4268798828125, 290.8493957519531]
+Class: Car, Confidence: 0.87, Box: [634.244873046875, 178.25547790527344, 722.6116333007812, 214.45103454589844]
+Class: Car, Confidence: 0.67, Box: [497.07000732421875, 183.11805725097656, 547.6286010742188, 226.79420471191406]
+Class: Car, Confidence: 0.66, Box: [546.4757690429688, 180.1830291748047, 569.9719848632812, 201.32794189453125]
+Class: Cyclist, Confidence: 0.65, Box: [785.3334350585938, 185.2954559326172, 904.2372436523438, 278.3400573730469]
+Class: Car, Confidence: 0.59, Box: [617.1967163085938, 178.30499267578125, 680.3411865234375, 205.4948272705078]
+
+Escalated stage-1 detection #6 (Car, conf=0.6709)
+Crop box used for stage-2: [np.int64(465), np.int64(151), np.int64(579), np.int64(258)] (pad=32)
+Stage-2 inference time: 88.88 ms
+Stage-2 best detection: Car (conf=0.7967, delta=+0.1258)
+Final decision: Car (0.7967) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #7 (Car, conf=0.6631)
+Crop box used for stage-2: [np.int64(514), np.int64(148), np.int64(601), np.int64(233)] (pad=32)
+Stage-2 inference time: 91.94 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.6631) because stage2_no_detection.
+
+Escalated stage-1 detection #8 (Cyclist, conf=0.6534)
+Crop box used for stage-2: [np.int64(753), np.int64(153), np.int64(936), np.int64(310)] (pad=32)
+Stage-2 inference time: 94.57 ms
+Stage-2 best detection: Cyclist (conf=0.8182, delta=+0.1648)
+Final decision: Cyclist (0.8182) | reason=agree | stage1=Cyclist -> stage2=Cyclist
+
+Escalated stage-1 detection #9 (Car, conf=0.5867)
+Crop box used for stage-2: [np.int64(585), np.int64(146), np.int64(712), np.int64(237)] (pad=32)
+Stage-2 inference time: 99.78 ms
+Stage-2 best detection: Car (conf=0.8711, delta=+0.2845)
+Final decision: Car (0.8711) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000257.png
+------------------------------------------------------------------------
+Stage-1 inference time: 70.23 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 1
+Class: Car, Confidence: 0.87, Box: [792.912841796875, 174.4452362060547, 862.4879760742188, 202.25608825683594]
+Class: Car, Confidence: 0.70, Box: [653.84619140625, 173.89358520507812, 676.8820190429688, 190.36390686035156]
+
+Escalated stage-1 detection #1 (Car, conf=0.6985)
+Crop box used for stage-2: [np.int64(621), np.int64(141), np.int64(708), np.int64(222)] (pad=32)
+Stage-2 inference time: 91.52 ms
+Stage-2 best detection: Car (conf=0.7691, delta=+0.0706)
+Final decision: Car (0.7691) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000260.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.65 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 0
+Class: Car, Confidence: 0.82, Box: [581.885009765625, 174.8525848388672, 603.0850219726562, 193.8877410888672]
+Class: Car, Confidence: 0.72, Box: [555.8087158203125, 173.44691467285156, 575.6600341796875, 188.48486328125]
+
+------------------------------------------------------------------------
+IMAGE: 000262.png
+------------------------------------------------------------------------
+Stage-1 inference time: 77.71 ms
+Stage-1 detections kept after filtering: 8
+Escalated detections: 2
+Class: Car, Confidence: 0.93, Box: [905.9595336914062, 199.8107147216797, 1241.6119384765625, 374.8709716796875]
+Class: Car, Confidence: 0.92, Box: [692.3709106445312, 177.7205810546875, 814.8070678710938, 270.359375]
+Class: Car, Confidence: 0.92, Box: [755.9369506835938, 179.8854217529297, 1031.4365234375, 361.5267028808594]
+Class: Car, Confidence: 0.90, Box: [454.8714294433594, 179.48057556152344, 534.3124389648438, 239.61981201171875]
+Class: Car, Confidence: 0.86, Box: [673.3892211914062, 176.7175750732422, 741.0078735351562, 233.71278381347656]
+Class: Car, Confidence: 0.78, Box: [649.7076416015625, 179.18670654296875, 693.0332641601562, 214.88311767578125]
+Class: Car, Confidence: 0.60, Box: [638.6654052734375, 175.5677032470703, 674.1103515625, 206.03138732910156]
+Class: Car, Confidence: 0.37, Box: [497.42169189453125, 180.8183135986328, 543.8740844726562, 218.2940216064453]
+
+Escalated stage-1 detection #6 (Car, conf=0.5995)
+Crop box used for stage-2: [np.int64(606), np.int64(143), np.int64(706), np.int64(238)] (pad=32)
+Stage-2 inference time: 97.69 ms
+Stage-2 best detection: Car (conf=0.8771, delta=+0.2775)
+Final decision: Car (0.8771) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #7 (Car, conf=0.3680)
+Crop box used for stage-2: [np.int64(465), np.int64(148), np.int64(575), np.int64(250)] (pad=32)
+Stage-2 inference time: 94.41 ms
+Stage-2 best detection: Car (conf=0.7230, delta=+0.3550)
+Final decision: Car (0.7230) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000267.png
+------------------------------------------------------------------------
+Stage-1 inference time: 93.90 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 1
+Class: Car, Confidence: 0.92, Box: [583.1265258789062, 176.70668029785156, 683.0968627929688, 262.8171691894531]
+Class: Car, Confidence: 0.85, Box: [551.1325073242188, 182.06732177734375, 609.2724609375, 222.86807250976562]
+Class: Car, Confidence: 0.37, Box: [1203.3505859375, 191.16192626953125, 1242.0, 373.6365966796875]
+
+Escalated stage-1 detection #2 (Car, conf=0.3720)
+Crop box used for stage-2: [np.int64(1157), np.int64(145), 1242, 375] (pad=46)
+Stage-2 inference time: 95.35 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.3720) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000294.png
+------------------------------------------------------------------------
+Stage-1 inference time: 83.47 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Pedestrian, Confidence: 0.87, Box: [104.89098358154297, 152.87953186035156, 207.06578063964844, 331.9153747558594]
+
+------------------------------------------------------------------------
+IMAGE: 000295.png
+------------------------------------------------------------------------
+Stage-1 inference time: 88.82 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 0
+Class: Car, Confidence: 0.91, Box: [285.119873046875, 187.42701721191406, 419.890380859375, 284.1650085449219]
+Class: Cyclist, Confidence: 0.88, Box: [815.2645874023438, 140.07891845703125, 908.4442138671875, 307.6248474121094]
+
+------------------------------------------------------------------------
+IMAGE: 000300.png
+------------------------------------------------------------------------
+Stage-1 inference time: 90.54 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 1
+Class: Car, Confidence: 0.84, Box: [783.0032348632812, 174.1737060546875, 853.4515991210938, 202.08038330078125]
+Class: Car, Confidence: 0.56, Box: [646.4533081054688, 172.97781372070312, 669.6577758789062, 189.01698303222656]
+
+Escalated stage-1 detection #1 (Car, conf=0.5609)
+Crop box used for stage-2: [np.int64(614), np.int64(140), np.int64(701), np.int64(221)] (pad=32)
+Stage-2 inference time: 96.23 ms
+Stage-2 best detection: Car (conf=0.3388, delta=-0.2221)
+Final decision: Car (0.3388) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000303.png
+------------------------------------------------------------------------
+Stage-1 inference time: 88.11 ms
+Stage-1 detections kept after filtering: 7
+Escalated detections: 4
+Class: Car, Confidence: 0.92, Box: [569.9251708984375, 183.53262329101562, 661.8775634765625, 269.12860107421875]
+Class: Pedestrian, Confidence: 0.83, Box: [916.1959228515625, 169.1338653564453, 947.1163330078125, 242.75869750976562]
+Class: Pedestrian, Confidence: 0.74, Box: [979.657470703125, 174.29617309570312, 1008.9149169921875, 237.3660125732422]
+Class: Car, Confidence: 0.58, Box: [0.11455243080854416, 194.29737854003906, 50.02798843383789, 239.7056884765625]
+Class: Pedestrian, Confidence: 0.54, Box: [1058.940673828125, 173.18710327148438, 1075.06787109375, 215.7489013671875]
+Class: Car, Confidence: 0.32, Box: [486.9482421875, 186.1803741455078, 510.7359313964844, 202.321533203125]
+Class: Car, Confidence: 0.26, Box: [415.327392578125, 189.89923095703125, 481.3393249511719, 228.58001708984375]
+
+Escalated stage-1 detection #3 (Car, conf=0.5756)
+Crop box used for stage-2: [0, np.int64(162), np.int64(82), np.int64(271)] (pad=32)
+Stage-2 inference time: 97.63 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.5756) because stage2_no_detection.
+
+Escalated stage-1 detection #4 (Pedestrian, conf=0.5383)
+Crop box used for stage-2: [np.int64(1026), np.int64(141), np.int64(1107), np.int64(247)] (pad=32)
+Stage-2 inference time: 98.70 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Pedestrian (0.5383) because stage2_no_detection.
+
+Escalated stage-1 detection #5 (Car, conf=0.3233)
+Crop box used for stage-2: [np.int64(454), np.int64(154), np.int64(542), np.int64(234)] (pad=32)
+Stage-2 inference time: 97.21 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.3233) because stage2_no_detection.
+
+Escalated stage-1 detection #6 (Car, conf=0.2563)
+Crop box used for stage-2: [np.int64(383), np.int64(157), np.int64(513), np.int64(260)] (pad=32)
+Stage-2 inference time: 105.22 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.2563) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000313.png
+------------------------------------------------------------------------
+Stage-1 inference time: 96.39 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Car, Confidence: 0.86, Box: [274.37969970703125, 185.3118133544922, 424.8216857910156, 229.9014129638672]
+
+------------------------------------------------------------------------
+IMAGE: 000317.png
+------------------------------------------------------------------------
+Stage-1 inference time: 84.33 ms
+Stage-1 detections kept after filtering: 10
+Escalated detections: 7
+Class: Cyclist, Confidence: 0.92, Box: [292.3846130371094, 177.52572631835938, 525.90283203125, 370.0]
+Class: Cyclist, Confidence: 0.78, Box: [877.4618530273438, 182.9971923828125, 929.3224487304688, 269.099853515625]
+Class: Cyclist, Confidence: 0.75, Box: [705.702880859375, 181.2245330810547, 749.2881469726562, 261.2573547363281]
+Class: Pedestrian, Confidence: 0.47, Box: [764.7262573242188, 188.11148071289062, 779.9669189453125, 225.68678283691406]
+Class: Pedestrian, Confidence: 0.46, Box: [334.9366455078125, 179.62254333496094, 350.6842956542969, 223.84291076660156]
+Class: Pedestrian, Confidence: 0.35, Box: [967.0355224609375, 185.39645385742188, 986.500244140625, 222.98483276367188]
+Class: Pedestrian, Confidence: 0.35, Box: [312.4813537597656, 179.0736846923828, 328.7276611328125, 226.87193298339844]
+Class: Pedestrian, Confidence: 0.34, Box: [315.4193115234375, 178.32310485839844, 331.0896911621094, 227.69044494628906]
+Class: Pedestrian, Confidence: 0.26, Box: [744.6898193359375, 186.424560546875, 759.8289184570312, 223.62924194335938]
+Class: Pedestrian, Confidence: 0.25, Box: [713.6052856445312, 182.8069305419922, 746.1264038085938, 254.32302856445312]
+
+Escalated stage-1 detection #3 (Pedestrian, conf=0.4733)
+Crop box used for stage-2: [np.int64(732), np.int64(156), np.int64(811), np.int64(257)] (pad=32)
+Stage-2 inference time: 94.97 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Pedestrian (0.4733) because stage2_no_detection.
+
+Escalated stage-1 detection #4 (Pedestrian, conf=0.4566)
+Crop box used for stage-2: [np.int64(302), np.int64(147), np.int64(382), np.int64(255)] (pad=32)
+Stage-2 inference time: 95.21 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Pedestrian (0.4566) because stage2_no_detection.
+
+Escalated stage-1 detection #5 (Pedestrian, conf=0.3487)
+Crop box used for stage-2: [np.int64(935), np.int64(153), np.int64(1018), np.int64(254)] (pad=32)
+Stage-2 inference time: 95.64 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Pedestrian (0.3487) because stage2_no_detection.
+
+Escalated stage-1 detection #6 (Pedestrian, conf=0.3459)
+Crop box used for stage-2: [np.int64(280), np.int64(147), np.int64(360), np.int64(258)] (pad=32)
+Stage-2 inference time: 92.92 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Pedestrian (0.3459) because stage2_no_detection.
+
+Escalated stage-1 detection #7 (Pedestrian, conf=0.3420)
+Crop box used for stage-2: [np.int64(283), np.int64(146), np.int64(363), np.int64(259)] (pad=32)
+Stage-2 inference time: 91.95 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Pedestrian (0.3420) because stage2_no_detection.
+
+Escalated stage-1 detection #8 (Pedestrian, conf=0.2550)
+Crop box used for stage-2: [np.int64(712), np.int64(154), np.int64(791), np.int64(255)] (pad=32)
+Stage-2 inference time: 92.78 ms
+Stage-2 best detection: Pedestrian (conf=0.6973, delta=+0.4422)
+Final decision: Pedestrian (0.6973) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #9 (Pedestrian, conf=0.2513)
+Crop box used for stage-2: [np.int64(681), np.int64(150), np.int64(778), np.int64(286)] (pad=32)
+Stage-2 inference time: 94.86 ms
+Stage-2 best detection: Pedestrian (conf=0.7721, delta=+0.5208)
+Final decision: Pedestrian (0.7721) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+------------------------------------------------------------------------
+IMAGE: 000325.png
+------------------------------------------------------------------------
+Stage-1 inference time: 90.04 ms
+Stage-1 detections kept after filtering: 8
+Escalated detections: 1
+Class: Car, Confidence: 0.93, Box: [310.99310302734375, 186.45516967773438, 448.6133117675781, 281.9724426269531]
+Class: Car, Confidence: 0.92, Box: [581.4050903320312, 176.97052001953125, 629.1174926757812, 225.34530639648438]
+Class: Car, Confidence: 0.91, Box: [107.49686431884766, 181.20835876464844, 196.9051513671875, 218.44053649902344]
+Class: Car, Confidence: 0.89, Box: [192.1291046142578, 182.52061462402344, 262.8251647949219, 213.3266143798828]
+Class: Car, Confidence: 0.88, Box: [508.93426513671875, 179.9932098388672, 549.9569702148438, 212.7123565673828]
+Class: Car, Confidence: 0.88, Box: [0.17229503393173218, 178.60549926757812, 107.95459747314453, 227.95806884765625]
+Class: Cyclist, Confidence: 0.79, Box: [984.520263671875, 186.2105255126953, 1030.197509765625, 247.15341186523438]
+Class: Car, Confidence: 0.50, Box: [551.4692993164062, 178.69349670410156, 574.9887084960938, 198.40274047851562]
+
+Escalated stage-1 detection #7 (Car, conf=0.4987)
+Crop box used for stage-2: [np.int64(519), np.int64(146), np.int64(606), np.int64(230)] (pad=32)
+Stage-2 inference time: 99.28 ms
+Stage-2 best detection: Car (conf=0.8931, delta=+0.3945)
+Final decision: Car (0.8931) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000326.png
+------------------------------------------------------------------------
+Stage-1 inference time: 91.08 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 0
+Class: Car, Confidence: 0.95, Box: [917.9676513671875, 166.251953125, 1240.4949951171875, 373.54443359375]
+Class: Car, Confidence: 0.93, Box: [690.5078125, 183.5377197265625, 809.4327392578125, 261.36029052734375]
+
+------------------------------------------------------------------------
+IMAGE: 000329.png
+------------------------------------------------------------------------
+Stage-1 inference time: 89.30 ms
+Stage-1 detections kept after filtering: 4
+Escalated detections: 2
+Class: Car, Confidence: 0.93, Box: [601.5179443359375, 179.43983459472656, 628.5208740234375, 207.31381225585938]
+Class: Pedestrian, Confidence: 0.75, Box: [893.319580078125, 158.1061553955078, 930.6163940429688, 260.3832702636719]
+Class: Car, Confidence: 0.61, Box: [456.5468444824219, 186.52777099609375, 481.864990234375, 204.82916259765625]
+Class: Car, Confidence: 0.29, Box: [502.1487121582031, 184.39822387695312, 526.1639404296875, 202.38075256347656]
+
+Escalated stage-1 detection #2 (Car, conf=0.6070)
+Crop box used for stage-2: [np.int64(424), np.int64(154), np.int64(513), np.int64(236)] (pad=32)
+Stage-2 inference time: 94.71 ms
+Stage-2 best detection: Car (conf=0.5612, delta=-0.0458)
+Final decision: Car (0.5612) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #3 (Car, conf=0.2854)
+Crop box used for stage-2: [np.int64(470), np.int64(152), np.int64(558), np.int64(234)] (pad=32)
+Stage-2 inference time: 96.53 ms
+Stage-2 best detection: Car (conf=0.7777, delta=+0.4923)
+Final decision: Car (0.7777) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000336.png
+------------------------------------------------------------------------
+Stage-1 inference time: 88.23 ms
+Stage-1 detections kept after filtering: 13
+Escalated detections: 10
+Class: Pedestrian, Confidence: 0.81, Box: [208.8013153076172, 162.66908264160156, 285.55908203125, 344.0416564941406]
+Class: Pedestrian, Confidence: 0.80, Box: [873.35107421875, 150.9817352294922, 965.2931518554688, 359.1504211425781]
+Class: Pedestrian, Confidence: 0.77, Box: [777.8493041992188, 161.11842346191406, 856.3277587890625, 364.2001647949219]
+Class: Pedestrian, Confidence: 0.69, Box: [549.0114135742188, 163.93072509765625, 583.5739135742188, 260.4615173339844]
+Class: Car, Confidence: 0.64, Box: [457.45867919921875, 160.75656127929688, 507.9780578613281, 221.57933044433594]
+Class: Pedestrian, Confidence: 0.50, Box: [720.70263671875, 167.43258666992188, 750.9749755859375, 239.26422119140625]
+Class: Pedestrian, Confidence: 0.45, Box: [991.1695556640625, 153.9979248046875, 1041.355712890625, 268.7804870605469]
+Class: Pedestrian, Confidence: 0.44, Box: [947.7738647460938, 153.9204864501953, 990.0642700195312, 249.7549285888672]
+Class: Pedestrian, Confidence: 0.37, Box: [1132.0748291015625, 141.88330078125, 1191.9107666015625, 268.5928955078125]
+Class: Pedestrian, Confidence: 0.31, Box: [957.7030029296875, 150.88833618164062, 995.6630249023438, 250.43191528320312]
+Class: Pedestrian, Confidence: 0.27, Box: [940.1859741210938, 152.76214599609375, 981.513671875, 251.27218627929688]
+Class: Pedestrian, Confidence: 0.26, Box: [518.791259765625, 165.76327514648438, 538.2561645507812, 228.05206298828125]
+Class: Pedestrian, Confidence: 0.25, Box: [507.04010009765625, 164.2948455810547, 530.6826782226562, 230.67529296875]
+
+Escalated stage-1 detection #3 (Pedestrian, conf=0.6877)
+Crop box used for stage-2: [np.int64(517), np.int64(131), np.int64(615), np.int64(292)] (pad=32)
+Stage-2 inference time: 97.02 ms
+Stage-2 best detection: Pedestrian (conf=0.8975, delta=+0.2098)
+Final decision: Pedestrian (0.8975) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #4 (Car, conf=0.6357)
+Crop box used for stage-2: [np.int64(425), np.int64(128), np.int64(539), np.int64(253)] (pad=32)
+Stage-2 inference time: 99.86 ms
+Stage-2 best detection: Pedestrian (conf=0.2696, delta=-0.3661)
+Final decision: Car (0.6357) | reason=kept_stage1 | stage1=Car -> stage2=Pedestrian
+
+Escalated stage-1 detection #5 (Pedestrian, conf=0.4974)
+Crop box used for stage-2: [np.int64(688), np.int64(135), np.int64(782), np.int64(271)] (pad=32)
+Stage-2 inference time: 100.44 ms
+Stage-2 best detection: Pedestrian (conf=0.4954, delta=-0.0020)
+Final decision: Pedestrian (0.4954) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #6 (Pedestrian, conf=0.4515)
+Crop box used for stage-2: [np.int64(959), np.int64(121), np.int64(1073), np.int64(300)] (pad=32)
+Stage-2 inference time: 100.14 ms
+Stage-2 best detection: Pedestrian (conf=0.6193, delta=+0.1678)
+Final decision: Pedestrian (0.6193) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #7 (Pedestrian, conf=0.4353)
+Crop box used for stage-2: [np.int64(915), np.int64(121), np.int64(1022), np.int64(281)] (pad=32)
+Stage-2 inference time: 99.10 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Pedestrian (0.4353) because stage2_no_detection.
+
+Escalated stage-1 detection #8 (Pedestrian, conf=0.3672)
+Crop box used for stage-2: [np.int64(1100), np.int64(109), np.int64(1223), np.int64(300)] (pad=32)
+Stage-2 inference time: 97.48 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Pedestrian (0.3672) because stage2_no_detection.
+
+Escalated stage-1 detection #9 (Pedestrian, conf=0.3068)
+Crop box used for stage-2: [np.int64(925), np.int64(118), np.int64(1027), np.int64(282)] (pad=32)
+Stage-2 inference time: 98.07 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Pedestrian (0.3068) because stage2_no_detection.
+
+Escalated stage-1 detection #10 (Pedestrian, conf=0.2722)
+Crop box used for stage-2: [np.int64(908), np.int64(120), np.int64(1013), np.int64(283)] (pad=32)
+Stage-2 inference time: 99.23 ms
+Stage-2 best detection: Pedestrian (conf=0.3249, delta=+0.0527)
+Final decision: Pedestrian (0.3249) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #11 (Pedestrian, conf=0.2612)
+Crop box used for stage-2: [np.int64(486), np.int64(133), np.int64(570), np.int64(260)] (pad=32)
+Stage-2 inference time: 96.67 ms
+Stage-2 best detection: Pedestrian (conf=0.7863, delta=+0.5251)
+Final decision: Pedestrian (0.7863) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #12 (Pedestrian, conf=0.2549)
+Crop box used for stage-2: [np.int64(475), np.int64(132), np.int64(562), np.int64(262)] (pad=32)
+Stage-2 inference time: 104.07 ms
+Stage-2 best detection: Pedestrian (conf=0.6312, delta=+0.3764)
+Final decision: Pedestrian (0.6312) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+------------------------------------------------------------------------
+IMAGE: 000342.png
+------------------------------------------------------------------------
+Stage-1 inference time: 73.60 ms
+Stage-1 detections kept after filtering: 4
+Escalated detections: 1
+Class: Pedestrian, Confidence: 0.82, Box: [353.7209777832031, 171.21142578125, 406.3560485839844, 304.1583251953125]
+Class: Pedestrian, Confidence: 0.81, Box: [1090.18896484375, 128.63546752929688, 1215.8155517578125, 375.0]
+Class: Pedestrian, Confidence: 0.77, Box: [0.0, 163.0926971435547, 240.76712036132812, 372.4407043457031]
+Class: Pedestrian, Confidence: 0.49, Box: [443.818603515625, 172.76608276367188, 465.0210876464844, 230.38763427734375]
+
+Escalated stage-1 detection #3 (Pedestrian, conf=0.4938)
+Crop box used for stage-2: [np.int64(411), np.int64(140), np.int64(497), np.int64(262)] (pad=32)
+Stage-2 inference time: 100.09 ms
+Stage-2 best detection: Pedestrian (conf=0.8155, delta=+0.3217)
+Final decision: Pedestrian (0.8155) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+------------------------------------------------------------------------
+IMAGE: 000355.png
+------------------------------------------------------------------------
+Stage-1 inference time: 70.84 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 0
+Class: Car, Confidence: 0.89, Box: [403.0100402832031, 167.96243286132812, 455.2879943847656, 210.53265380859375]
+Class: Truck, Confidence: 0.74, Box: [745.1109619140625, 91.84052276611328, 1016.8206176757812, 207.39915466308594]
+
+------------------------------------------------------------------------
+IMAGE: 000357.png
+------------------------------------------------------------------------
+Stage-1 inference time: 79.28 ms
+Stage-1 detections kept after filtering: 7
+Escalated detections: 0
+Class: Car, Confidence: 0.93, Box: [146.8159637451172, 187.3001251220703, 390.1710205078125, 314.10516357421875]
+Class: Car, Confidence: 0.93, Box: [394.6765441894531, 185.53575134277344, 483.5545654296875, 241.5811004638672]
+Class: Car, Confidence: 0.90, Box: [573.2820434570312, 174.3723602294922, 612.1412353515625, 209.37844848632812]
+Class: Car, Confidence: 0.87, Box: [54.973140716552734, 177.71014404296875, 216.510986328125, 248.3242645263672]
+Class: Car, Confidence: 0.86, Box: [0.0016938983462750912, 180.80064392089844, 104.32097625732422, 330.0783996582031]
+Class: Car, Confidence: 0.81, Box: [335.7529296875, 180.93650817871094, 408.90283203125, 219.82640075683594]
+Class: Car, Confidence: 0.76, Box: [440.6837158203125, 179.6686248779297, 499.00543212890625, 219.8338623046875]
+
+------------------------------------------------------------------------
+IMAGE: 000361.png
+------------------------------------------------------------------------
+Stage-1 inference time: 81.25 ms
+Stage-1 detections kept after filtering: 6
+Escalated detections: 1
+Class: Car, Confidence: 0.92, Box: [12.280458450317383, 191.89920043945312, 290.2154846191406, 332.3969421386719]
+Class: Car, Confidence: 0.88, Box: [458.4981994628906, 186.75732421875, 527.2960815429688, 232.23065185546875]
+Class: Car, Confidence: 0.86, Box: [325.5006408691406, 194.16893005371094, 425.5218505859375, 247.2270965576172]
+Class: Car, Confidence: 0.84, Box: [709.6469116210938, 168.23379516601562, 810.9390258789062, 200.3248291015625]
+Class: Car, Confidence: 0.81, Box: [628.1834106445312, 179.4482421875, 660.8922729492188, 206.68142700195312]
+Class: Car, Confidence: 0.63, Box: [501.74066162109375, 186.3368377685547, 545.3369750976562, 216.55322265625]
+
+Escalated stage-1 detection #5 (Car, conf=0.6294)
+Crop box used for stage-2: [np.int64(469), np.int64(154), np.int64(577), np.int64(248)] (pad=32)
+Stage-2 inference time: 100.11 ms
+Stage-2 best detection: Car (conf=0.9295, delta=+0.3001)
+Final decision: Car (0.9295) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000363.png
+------------------------------------------------------------------------
+Stage-1 inference time: 74.51 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 1
+Class: Car, Confidence: 0.90, Box: [588.20947265625, 175.10427856445312, 633.540283203125, 220.08511352539062]
+Class: Car, Confidence: 0.88, Box: [497.26007080078125, 177.030517578125, 546.6351318359375, 216.30638122558594]
+Class: Car, Confidence: 0.61, Box: [547.229736328125, 178.80804443359375, 572.9465942382812, 199.6868133544922]
+
+Escalated stage-1 detection #2 (Car, conf=0.6105)
+Crop box used for stage-2: [np.int64(515), np.int64(146), np.int64(604), np.int64(231)] (pad=32)
+Stage-2 inference time: 101.44 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.6105) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000372.png
+------------------------------------------------------------------------
+Stage-1 inference time: 76.85 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 0
+Class: Truck, Confidence: 0.94, Box: [670.653564453125, 113.0384521484375, 848.2965698242188, 251.75831604003906]
+Class: Car, Confidence: 0.91, Box: [0.8991114497184753, 195.8645477294922, 173.51446533203125, 265.9729309082031]
+Class: Car, Confidence: 0.88, Box: [364.47186279296875, 183.74476623535156, 412.0679931640625, 208.97549438476562]
+
+------------------------------------------------------------------------
+IMAGE: 000375.png
+------------------------------------------------------------------------
+Stage-1 inference time: 75.53 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 2
+Class: Car, Confidence: 0.94, Box: [161.72540283203125, 190.2051239013672, 377.6851501464844, 297.2236328125]
+Class: Car, Confidence: 0.53, Box: [624.963134765625, 169.67364501953125, 645.69580078125, 189.62258911132812]
+Class: Car, Confidence: 0.31, Box: [592.8165283203125, 170.1923065185547, 613.90576171875, 188.5310821533203]
+
+Escalated stage-1 detection #1 (Car, conf=0.5326)
+Crop box used for stage-2: [np.int64(592), np.int64(137), np.int64(677), np.int64(221)] (pad=32)
+Stage-2 inference time: 100.80 ms
+Stage-2 best detection: Car (conf=0.5348, delta=+0.0022)
+Final decision: Car (0.5348) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #2 (Car, conf=0.3082)
+Crop box used for stage-2: [np.int64(560), np.int64(138), np.int64(645), np.int64(220)] (pad=32)
+Stage-2 inference time: 100.60 ms
+Stage-2 best detection: Car (conf=0.7720, delta=+0.4638)
+Final decision: Car (0.7720) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000376.png
+------------------------------------------------------------------------
+Stage-1 inference time: 71.87 ms
+Stage-1 detections kept after filtering: 5
+Escalated detections: 2
+Class: Car, Confidence: 0.92, Box: [495.82794189453125, 183.09295654296875, 549.57958984375, 229.08140563964844]
+Class: Car, Confidence: 0.89, Box: [316.70147705078125, 190.7989501953125, 389.6574401855469, 232.85049438476562]
+Class: Car, Confidence: 0.87, Box: [580.5293579101562, 181.11483764648438, 608.7206420898438, 208.0063018798828]
+Class: Car, Confidence: 0.34, Box: [394.1783142089844, 186.52008056640625, 429.83514404296875, 213.48699951171875]
+Class: Cyclist, Confidence: 0.32, Box: [637.5473022460938, 174.86715698242188, 670.2565307617188, 212.54824829101562]
+
+Escalated stage-1 detection #3 (Car, conf=0.3438)
+Crop box used for stage-2: [np.int64(362), np.int64(154), np.int64(461), np.int64(245)] (pad=32)
+Stage-2 inference time: 97.10 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.3438) because stage2_no_detection.
+
+Escalated stage-1 detection #4 (Cyclist, conf=0.3216)
+Crop box used for stage-2: [np.int64(605), np.int64(142), np.int64(702), np.int64(244)] (pad=32)
+Stage-2 inference time: 97.85 ms
+Stage-2 best detection: Cyclist (conf=0.8033, delta=+0.4817)
+Final decision: Cyclist (0.8033) | reason=agree | stage1=Cyclist -> stage2=Cyclist
+
+------------------------------------------------------------------------
+IMAGE: 000378.png
+------------------------------------------------------------------------
+Stage-1 inference time: 98.72 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 0
+Class: Car, Confidence: 0.91, Box: [364.68304443359375, 180.02720642089844, 500.7889404296875, 232.2750701904297]
+Class: Car, Confidence: 0.91, Box: [607.91748046875, 168.06980895996094, 790.5515747070312, 232.61631774902344]
+Class: Car, Confidence: 0.81, Box: [581.673828125, 178.01515197753906, 690.3092651367188, 217.47650146484375]
+
+------------------------------------------------------------------------
+IMAGE: 000385.png
+------------------------------------------------------------------------
+Stage-1 inference time: 78.67 ms
+Stage-1 detections kept after filtering: 5
+Escalated detections: 2
+Class: Car, Confidence: 0.95, Box: [753.0476684570312, 192.3470458984375, 1024.62939453125, 371.384033203125]
+Class: Car, Confidence: 0.89, Box: [507.8337707519531, 180.9227752685547, 565.3971557617188, 228.4877471923828]
+Class: Car, Confidence: 0.88, Box: [672.3864135742188, 183.25735473632812, 747.1116333007812, 240.80641174316406]
+Class: Car, Confidence: 0.68, Box: [650.7992553710938, 178.25335693359375, 681.9197998046875, 208.98745727539062]
+Class: Car, Confidence: 0.66, Box: [557.0186157226562, 181.42327880859375, 584.63330078125, 207.7496337890625]
+
+Escalated stage-1 detection #3 (Car, conf=0.6781)
+Crop box used for stage-2: [np.int64(618), np.int64(146), np.int64(713), np.int64(240)] (pad=32)
+Stage-2 inference time: 111.83 ms
+Stage-2 best detection: Car (conf=0.9054, delta=+0.2273)
+Final decision: Car (0.9054) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #4 (Car, conf=0.6633)
+Crop box used for stage-2: [np.int64(525), np.int64(149), np.int64(616), np.int64(239)] (pad=32)
+Stage-2 inference time: 109.79 ms
+Stage-2 best detection: Car (conf=0.7943, delta=+0.1310)
+Final decision: Car (0.7943) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000401.png
+------------------------------------------------------------------------
+Stage-1 inference time: 79.67 ms
+Stage-1 detections kept after filtering: 9
+Escalated detections: 3
+Class: Car, Confidence: 0.91, Box: [663.13671875, 173.62156677246094, 768.5084838867188, 248.7979278564453]
+Class: Car, Confidence: 0.90, Box: [0.9026796817779541, 192.15599060058594, 363.1661071777344, 373.2322692871094]
+Class: Car, Confidence: 0.88, Box: [117.63600158691406, 184.35546875, 410.597900390625, 369.4028015136719]
+Class: Car, Confidence: 0.87, Box: [511.150634765625, 176.99557495117188, 557.2364501953125, 216.0760040283203]
+Class: Car, Confidence: 0.84, Box: [636.4357299804688, 174.87881469726562, 691.0868530273438, 216.09222412109375]
+Class: Pedestrian, Confidence: 0.75, Box: [216.1175994873047, 161.7283172607422, 251.6705780029297, 293.88671875]
+Class: Pedestrian, Confidence: 0.64, Box: [112.3203125, 158.354248046875, 172.3980712890625, 361.4935302734375]
+Class: Car, Confidence: 0.40, Box: [622.422607421875, 171.99671936035156, 658.2366333007812, 203.32969665527344]
+Class: Pedestrian, Confidence: 0.30, Box: [123.87840270996094, 160.9899139404297, 170.06240844726562, 340.6904602050781]
+
+Escalated stage-1 detection #6 (Pedestrian, conf=0.6396)
+Crop box used for stage-2: [np.int64(61), np.int64(107), np.int64(223), 375] (pad=51)
+Stage-2 inference time: 116.60 ms
+Stage-2 best detection: Car (conf=0.8234, delta=+0.1838)
+Final decision: Car (0.8234) | reason=relabel | stage1=Pedestrian -> stage2=Car
+
+Escalated stage-1 detection #7 (Car, conf=0.4041)
+Crop box used for stage-2: [np.int64(590), np.int64(139), np.int64(690), np.int64(235)] (pad=32)
+Stage-2 inference time: 105.49 ms
+Stage-2 best detection: Car (conf=0.8832, delta=+0.4791)
+Final decision: Car (0.8832) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #8 (Pedestrian, conf=0.2989)
+Crop box used for stage-2: [np.int64(78), np.int64(115), np.int64(215), 375] (pad=45)
+Stage-2 inference time: 111.44 ms
+Stage-2 best detection: Car (conf=0.8462, delta=+0.5473)
+Final decision: Car (0.8462) | reason=relabel | stage1=Pedestrian -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000410.png
+------------------------------------------------------------------------
+Stage-1 inference time: 90.42 ms
+Stage-1 detections kept after filtering: 6
+Escalated detections: 3
+Class: Car, Confidence: 0.92, Box: [576.6328125, 169.7994842529297, 629.8701782226562, 222.47186279296875]
+Class: Car, Confidence: 0.85, Box: [114.58151245117188, 172.63064575195312, 198.4569549560547, 209.56956481933594]
+Class: Car, Confidence: 0.84, Box: [22.730480194091797, 180.1923828125, 134.5977020263672, 216.94390869140625]
+Class: Car, Confidence: 0.54, Box: [0.06760695576667786, 158.190673828125, 45.49092483520508, 221.31689453125]
+Class: Car, Confidence: 0.52, Box: [157.54588317871094, 170.29647827148438, 208.45162963867188, 197.2797393798828]
+Class: Car, Confidence: 0.31, Box: [352.1724853515625, 172.57313537597656, 385.2829284667969, 190.03201293945312]
+
+Escalated stage-1 detection #3 (Car, conf=0.5356)
+Crop box used for stage-2: [0, np.int64(126), np.int64(77), np.int64(253)] (pad=32)
+Stage-2 inference time: 112.87 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.5356) because stage2_no_detection.
+
+Escalated stage-1 detection #4 (Car, conf=0.5248)
+Crop box used for stage-2: [np.int64(125), np.int64(138), np.int64(240), np.int64(229)] (pad=32)
+Stage-2 inference time: 113.51 ms
+Stage-2 best detection: Car (conf=0.5989, delta=+0.0741)
+Final decision: Car (0.5989) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #5 (Car, conf=0.3058)
+Crop box used for stage-2: [np.int64(320), np.int64(140), np.int64(417), np.int64(222)] (pad=32)
+Stage-2 inference time: 110.34 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.3058) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000411.png
+------------------------------------------------------------------------
+Stage-1 inference time: 88.69 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 1
+Class: Car, Confidence: 0.95, Box: [963.3284912109375, 196.01698303222656, 1241.4556884765625, 374.2017517089844]
+Class: Car, Confidence: 0.67, Box: [671.232177734375, 173.96376037597656, 699.4827880859375, 192.57037353515625]
+
+Escalated stage-1 detection #1 (Car, conf=0.6721)
+Crop box used for stage-2: [np.int64(639), np.int64(141), np.int64(731), np.int64(224)] (pad=32)
+Stage-2 inference time: 117.24 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.6721) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000414.png
+------------------------------------------------------------------------
+Stage-1 inference time: 82.58 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Car, Confidence: 0.93, Box: [435.4554138183594, 174.50819396972656, 654.7474365234375, 262.4543762207031]
+
+------------------------------------------------------------------------
+IMAGE: 000416.png
+------------------------------------------------------------------------
+Stage-1 inference time: 90.16 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 1
+Class: Car, Confidence: 0.65, Box: [641.6356201171875, 179.2224884033203, 666.0582885742188, 196.96243286132812]
+
+Escalated stage-1 detection #0 (Car, conf=0.6516)
+Crop box used for stage-2: [np.int64(609), np.int64(147), np.int64(698), np.int64(228)] (pad=32)
+Stage-2 inference time: 116.84 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.6516) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000420.png
+------------------------------------------------------------------------
+Stage-1 inference time: 82.02 ms
+Stage-1 detections kept after filtering: 6
+Escalated detections: 1
+Class: Car, Confidence: 0.93, Box: [0.677187442779541, 184.98696899414062, 350.02362060546875, 373.43927001953125]
+Class: Car, Confidence: 0.92, Box: [344.4637451171875, 177.9137725830078, 469.57684326171875, 248.20220947265625]
+Class: Car, Confidence: 0.91, Box: [479.57861328125, 163.0205535888672, 597.22216796875, 252.71690368652344]
+Class: Car, Confidence: 0.90, Box: [801.575927734375, 165.70069885253906, 923.346923828125, 267.3437805175781]
+Class: Car, Confidence: 0.89, Box: [837.6350708007812, 163.54823303222656, 996.2108154296875, 234.14083862304688]
+Class: Car, Confidence: 0.27, Box: [806.6343994140625, 165.23301696777344, 930.3322143554688, 239.70509338378906]
+
+Escalated stage-1 detection #5 (Car, conf=0.2699)
+Crop box used for stage-2: [np.int64(774), np.int64(133), np.int64(962), np.int64(271)] (pad=32)
+Stage-2 inference time: 103.94 ms
+Stage-2 best detection: Car (conf=0.9321, delta=+0.6622)
+Final decision: Car (0.9321) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000422.png
+------------------------------------------------------------------------
+Stage-1 inference time: 71.78 ms
+Stage-1 detections kept after filtering: 11
+Escalated detections: 8
+Class: Car, Confidence: 0.93, Box: [142.52113342285156, 180.86016845703125, 364.25390625, 315.6973571777344]
+Class: Cyclist, Confidence: 0.89, Box: [367.95843505859375, 156.214599609375, 436.19366455078125, 281.86962890625]
+Class: Pedestrian, Confidence: 0.76, Box: [83.79969024658203, 163.34689331054688, 193.2834930419922, 372.54205322265625]
+Class: Pedestrian, Confidence: 0.65, Box: [13.260132789611816, 162.32339477539062, 97.95515441894531, 371.15301513671875]
+Class: Pedestrian, Confidence: 0.52, Box: [491.8880310058594, 160.0248565673828, 509.96307373046875, 212.70387268066406]
+Class: Pedestrian, Confidence: 0.45, Box: [26.291072845458984, 168.80929565429688, 109.58009338378906, 362.950927734375]
+Class: Pedestrian, Confidence: 0.41, Box: [0.0, 162.34889221191406, 74.4942855834961, 373.5273132324219]
+Class: Pedestrian, Confidence: 0.40, Box: [482.1412048339844, 162.3272247314453, 499.1849365234375, 213.23953247070312]
+Class: Pedestrian, Confidence: 0.35, Box: [641.2925415039062, 154.0154571533203, 668.9752197265625, 229.02207946777344]
+Class: Pedestrian, Confidence: 0.34, Box: [479.2265930175781, 162.1486053466797, 495.556396484375, 213.4944305419922]
+Class: Pedestrian, Confidence: 0.25, Box: [117.44216918945312, 169.43373107910156, 206.14334106445312, 366.60174560546875]
+
+Escalated stage-1 detection #3 (Pedestrian, conf=0.6451)
+Crop box used for stage-2: [0, np.int64(110), np.int64(149), 374] (pad=52)
+Stage-2 inference time: 101.54 ms
+Stage-2 best detection: Pedestrian (conf=0.5855, delta=-0.0596)
+Final decision: Pedestrian (0.5855) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #4 (Pedestrian, conf=0.5158)
+Crop box used for stage-2: [np.int64(459), np.int64(128), np.int64(541), np.int64(244)] (pad=32)
+Stage-2 inference time: 104.54 ms
+Stage-2 best detection: Pedestrian (conf=0.7217, delta=+0.2060)
+Final decision: Pedestrian (0.7217) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #5 (Pedestrian, conf=0.4520)
+Crop box used for stage-2: [0, np.int64(120), np.int64(157), 374] (pad=48)
+Stage-2 inference time: 128.48 ms
+Stage-2 best detection: Pedestrian (conf=0.6213, delta=+0.1692)
+Final decision: Pedestrian (0.6213) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #6 (Pedestrian, conf=0.4087)
+Crop box used for stage-2: [0, np.int64(109), np.int64(127), 374] (pad=53)
+Stage-2 inference time: 97.77 ms
+Stage-2 best detection: Pedestrian (conf=0.6648, delta=+0.2561)
+Final decision: Pedestrian (0.6648) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #7 (Pedestrian, conf=0.3964)
+Crop box used for stage-2: [np.int64(450), np.int64(130), np.int64(531), np.int64(245)] (pad=32)
+Stage-2 inference time: 95.69 ms
+Stage-2 best detection: Pedestrian (conf=0.7780, delta=+0.3815)
+Final decision: Pedestrian (0.7780) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #8 (Pedestrian, conf=0.3484)
+Crop box used for stage-2: [np.int64(609), np.int64(122), np.int64(700), np.int64(261)] (pad=32)
+Stage-2 inference time: 116.70 ms
+Stage-2 best detection: Pedestrian (conf=0.8417, delta=+0.4934)
+Final decision: Pedestrian (0.8417) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #9 (Pedestrian, conf=0.3351)
+Crop box used for stage-2: [np.int64(447), np.int64(130), np.int64(527), np.int64(245)] (pad=32)
+Stage-2 inference time: 91.05 ms
+Stage-2 best detection: Pedestrian (conf=0.8044, delta=+0.4693)
+Final decision: Pedestrian (0.8044) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #10 (Pedestrian, conf=0.2515)
+Crop box used for stage-2: [np.int64(68), np.int64(120), np.int64(255), 374] (pad=49)
+Stage-2 inference time: 91.45 ms
+Stage-2 best detection: Car (conf=0.4470, delta=+0.1955)
+Final decision: Pedestrian (0.2515) | reason=kept_stage1 | stage1=Pedestrian -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000426.png
+------------------------------------------------------------------------
+Stage-1 inference time: 72.79 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 0
+Class: Truck, Confidence: 0.94, Box: [789.0394897460938, 82.44210052490234, 1004.1293334960938, 335.982666015625]
+Class: Car, Confidence: 0.87, Box: [562.935302734375, 171.58447265625, 597.51904296875, 199.64559936523438]
+Class: Car, Confidence: 0.83, Box: [162.6636199951172, 175.29763793945312, 264.2264099121094, 232.26263427734375]
+
+------------------------------------------------------------------------
+IMAGE: 000439.png
+------------------------------------------------------------------------
+Stage-1 inference time: 66.22 ms
+Stage-1 detections kept after filtering: 6
+Escalated detections: 2
+Class: Car, Confidence: 0.92, Box: [1003.1132202148438, 190.98431396484375, 1223.9947509765625, 368.63970947265625]
+Class: Car, Confidence: 0.91, Box: [719.8731689453125, 171.90309143066406, 818.5060424804688, 254.68418884277344]
+Class: Car, Confidence: 0.87, Box: [693.2926635742188, 174.3090057373047, 772.2549438476562, 232.71145629882812]
+Class: Car, Confidence: 0.87, Box: [410.0658874511719, 178.40353393554688, 462.67864990234375, 205.51658630371094]
+Class: Car, Confidence: 0.65, Box: [674.7764282226562, 176.1710205078125, 726.5082397460938, 217.04556274414062]
+Class: Car, Confidence: 0.33, Box: [658.1806030273438, 176.9925079345703, 690.8936157226562, 203.51255798339844]
+
+Escalated stage-1 detection #4 (Car, conf=0.6512)
+Crop box used for stage-2: [np.int64(642), np.int64(144), np.int64(758), np.int64(249)] (pad=32)
+Stage-2 inference time: 86.66 ms
+Stage-2 best detection: Car (conf=0.8980, delta=+0.2468)
+Final decision: Car (0.8980) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #5 (Car, conf=0.3270)
+Crop box used for stage-2: [np.int64(626), np.int64(144), np.int64(722), np.int64(235)] (pad=32)
+Stage-2 inference time: 89.98 ms
+Stage-2 best detection: Car (conf=0.8212, delta=+0.4943)
+Final decision: Car (0.8212) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000443.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.73 ms
+Stage-1 detections kept after filtering: 7
+Escalated detections: 2
+Class: Car, Confidence: 0.93, Box: [292.765380859375, 191.5079803466797, 483.9948425292969, 328.05718994140625]
+Class: Car, Confidence: 0.91, Box: [509.8822937011719, 176.55938720703125, 559.6596069335938, 218.25369262695312]
+Class: Car, Confidence: 0.91, Box: [694.181884765625, 175.00643920898438, 808.4378051757812, 258.6421203613281]
+Class: Car, Confidence: 0.86, Box: [403.2219543457031, 182.36741638183594, 514.2409057617188, 261.46588134765625]
+Class: Car, Confidence: 0.85, Box: [675.0087280273438, 177.387451171875, 755.0713500976562, 235.95858764648438]
+Class: Car, Confidence: 0.67, Box: [538.3515625, 172.85195922851562, 575.833251953125, 204.16444396972656]
+Class: Car, Confidence: 0.45, Box: [634.6483154296875, 171.2171630859375, 662.5714111328125, 195.455078125]
+
+Escalated stage-1 detection #5 (Car, conf=0.6659)
+Crop box used for stage-2: [np.int64(506), np.int64(140), np.int64(607), np.int64(236)] (pad=32)
+Stage-2 inference time: 110.68 ms
+Stage-2 best detection: Car (conf=0.9293, delta=+0.2635)
+Final decision: Car (0.9293) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #6 (Car, conf=0.4482)
+Crop box used for stage-2: [np.int64(602), np.int64(139), np.int64(694), np.int64(227)] (pad=32)
+Stage-2 inference time: 115.47 ms
+Stage-2 best detection: Car (conf=0.8690, delta=+0.4208)
+Final decision: Car (0.8690) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000444.png
+------------------------------------------------------------------------
+Stage-1 inference time: 87.36 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Car, Confidence: 0.90, Box: [477.3994140625, 181.60739135742188, 535.2476806640625, 233.3047332763672]
+
+------------------------------------------------------------------------
+IMAGE: 000446.png
+------------------------------------------------------------------------
+Stage-1 inference time: 85.08 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Car, Confidence: 0.93, Box: [275.88580322265625, 186.9674530029297, 458.1164245605469, 296.8200378417969]
+
+------------------------------------------------------------------------
+IMAGE: 000458.png
+------------------------------------------------------------------------
+Stage-1 inference time: 78.63 ms
+Stage-1 detections kept after filtering: 5
+Escalated detections: 0
+Class: Car, Confidence: 0.89, Box: [835.183837890625, 178.18719482421875, 1238.8544921875, 330.4716796875]
+Class: Car, Confidence: 0.85, Box: [722.4059448242188, 184.40036010742188, 906.2489013671875, 245.55990600585938]
+Class: Car, Confidence: 0.83, Box: [800.3250732421875, 180.2423095703125, 1098.212158203125, 282.17864990234375]
+Class: Car, Confidence: 0.80, Box: [569.6337280273438, 187.90542602539062, 601.5029296875, 217.36611938476562]
+Class: Car, Confidence: 0.76, Box: [778.9502563476562, 182.05062866210938, 986.9926147460938, 263.8243408203125]
+
+------------------------------------------------------------------------
+IMAGE: 000459.png
+------------------------------------------------------------------------
+Stage-1 inference time: 71.59 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 0
+Class: Car, Confidence: 0.93, Box: [0.46821844577789307, 187.29293823242188, 349.5299072265625, 374.3578796386719]
+Class: Car, Confidence: 0.85, Box: [486.7681579589844, 179.86036682128906, 526.4761352539062, 213.5589599609375]
+Class: Car, Confidence: 0.83, Box: [321.29498291015625, 173.29306030273438, 432.0356140136719, 216.6105499267578]
+
+------------------------------------------------------------------------
+IMAGE: 000465.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.28 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Pedestrian, Confidence: 0.84, Box: [318.44610595703125, 157.53097534179688, 388.4791564941406, 308.3048095703125]
+
+------------------------------------------------------------------------
+IMAGE: 000468.png
+------------------------------------------------------------------------
+Stage-1 inference time: 66.05 ms
+Stage-1 detections kept after filtering: 5
+Escalated detections: 1
+Class: Car, Confidence: 0.94, Box: [549.8785400390625, 166.9175567626953, 722.3572998046875, 335.2021179199219]
+Class: Car, Confidence: 0.92, Box: [356.2568664550781, 178.456787109375, 417.2906799316406, 212.4161834716797]
+Class: Car, Confidence: 0.91, Box: [49.14057159423828, 187.17733764648438, 214.97654724121094, 259.1404724121094]
+Class: Car, Confidence: 0.83, Box: [428.6142272949219, 178.1301727294922, 463.6199951171875, 201.0272674560547]
+Class: Cyclist, Confidence: 0.68, Box: [0.018270350992679596, 183.6002655029297, 32.97305679321289, 240.92047119140625]
+
+Escalated stage-1 detection #4 (Cyclist, conf=0.6772)
+Crop box used for stage-2: [0, np.int64(151), np.int64(64), np.int64(272)] (pad=32)
+Stage-2 inference time: 90.22 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Cyclist (0.6772) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000474.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.93 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 0
+Class: Car, Confidence: 0.91, Box: [0.0, 194.3402557373047, 120.6203842163086, 343.8025207519531]
+Class: Car, Confidence: 0.79, Box: [480.8783874511719, 181.96214294433594, 540.5650634765625, 200.30072021484375]
+
+------------------------------------------------------------------------
+IMAGE: 000479.png
+------------------------------------------------------------------------
+Stage-1 inference time: 70.53 ms
+Stage-1 detections kept after filtering: 4
+Escalated detections: 0
+Class: Car, Confidence: 0.88, Box: [138.180908203125, 189.00152587890625, 248.4156494140625, 235.3273162841797]
+Class: Car, Confidence: 0.86, Box: [589.3817749023438, 172.4693145751953, 613.39111328125, 195.67047119140625]
+Class: Truck, Confidence: 0.85, Box: [620.3330688476562, 160.43641662597656, 650.7102661132812, 190.12522888183594]
+Class: Car, Confidence: 0.80, Box: [365.9591979980469, 181.20977783203125, 406.1461486816406, 202.8880615234375]
+
+------------------------------------------------------------------------
+IMAGE: 000480.png
+------------------------------------------------------------------------
+Stage-1 inference time: 70.20 ms
+Stage-1 detections kept after filtering: 4
+Escalated detections: 1
+Class: Car, Confidence: 0.89, Box: [194.9149627685547, 192.0, 287.601806640625, 231.03707885742188]
+Class: Car, Confidence: 0.88, Box: [589.8140869140625, 176.43934631347656, 613.801513671875, 199.32057189941406]
+Class: Truck, Confidence: 0.84, Box: [620.7268676757812, 164.45896911621094, 651.4608764648438, 194.09117126464844]
+Class: Car, Confidence: 0.54, Box: [381.0145568847656, 183.88482666015625, 417.67596435546875, 205.98394775390625]
+
+Escalated stage-1 detection #3 (Car, conf=0.5392)
+Crop box used for stage-2: [np.int64(349), np.int64(151), np.int64(449), np.int64(237)] (pad=32)
+Stage-2 inference time: 101.27 ms
+Stage-2 best detection: Car (conf=0.4292, delta=-0.1100)
+Final decision: Car (0.4292) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000482.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.71 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 1
+Class: Car, Confidence: 0.96, Box: [740.705078125, 182.5964813232422, 861.264404296875, 265.68695068359375]
+Class: Car, Confidence: 0.93, Box: [928.802978515625, 180.9469451904297, 1104.9947509765625, 267.6731262207031]
+Class: Car, Confidence: 0.59, Box: [646.205078125, 174.14077758789062, 667.8656005859375, 189.32394409179688]
+
+Escalated stage-1 detection #2 (Car, conf=0.5852)
+Crop box used for stage-2: [np.int64(614), np.int64(142), np.int64(699), np.int64(221)] (pad=32)
+Stage-2 inference time: 91.31 ms
+Stage-2 best detection: Car (conf=0.5702, delta=-0.0150)
+Final decision: Car (0.5702) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000488.png
+------------------------------------------------------------------------
+Stage-1 inference time: 72.14 ms
+Stage-1 detections kept after filtering: 7
+Escalated detections: 4
+Class: Car, Confidence: 0.88, Box: [472.7998046875, 186.29443359375, 541.2632446289062, 242.2816619873047]
+Class: Car, Confidence: 0.87, Box: [670.81982421875, 178.24636840820312, 853.5811157226562, 244.56471252441406]
+Class: Car, Confidence: 0.86, Box: [365.1216735839844, 187.54417419433594, 505.4141540527344, 286.71551513671875]
+Class: Car, Confidence: 0.68, Box: [632.0453491210938, 177.59466552734375, 719.777587890625, 214.7150421142578]
+Class: Car, Confidence: 0.36, Box: [516.8810424804688, 184.98365783691406, 559.2764282226562, 221.05909729003906]
+Class: Car, Confidence: 0.35, Box: [654.1935424804688, 179.11854553222656, 790.3343505859375, 224.80282592773438]
+Class: Car, Confidence: 0.29, Box: [550.3272094726562, 182.66026306152344, 574.81494140625, 206.55445861816406]
+
+Escalated stage-1 detection #3 (Car, conf=0.6803)
+Crop box used for stage-2: [np.int64(600), np.int64(145), np.int64(751), np.int64(246)] (pad=32)
+Stage-2 inference time: 96.20 ms
+Stage-2 best detection: Car (conf=0.9476, delta=+0.2673)
+Final decision: Car (0.9476) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #4 (Car, conf=0.3642)
+Crop box used for stage-2: [np.int64(484), np.int64(152), np.int64(591), np.int64(253)] (pad=32)
+Stage-2 inference time: 91.21 ms
+Stage-2 best detection: Car (conf=0.3436, delta=-0.0206)
+Final decision: Car (0.3436) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #5 (Car, conf=0.3507)
+Crop box used for stage-2: [np.int64(620), np.int64(145), np.int64(824), np.int64(258)] (pad=34)
+Stage-2 inference time: 89.84 ms
+Stage-2 best detection: Car (conf=0.9599, delta=+0.6092)
+Final decision: Car (0.9599) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #6 (Car, conf=0.2876)
+Crop box used for stage-2: [np.int64(518), np.int64(150), np.int64(606), np.int64(238)] (pad=32)
+Stage-2 inference time: 88.93 ms
+Stage-2 result: no detection returned.
+Final decision: keep stage-1 Car (0.2876) because stage2_no_detection.
+
+------------------------------------------------------------------------
+IMAGE: 000493.png
+------------------------------------------------------------------------
+Stage-1 inference time: 80.41 ms
+Stage-1 detections kept after filtering: 5
+Escalated detections: 0
+Class: Car, Confidence: 0.92, Box: [829.1331176757812, 178.22303771972656, 1136.54296875, 373.67230224609375]
+Class: Car, Confidence: 0.91, Box: [566.0689697265625, 180.8760528564453, 623.3600463867188, 224.20053100585938]
+Class: Car, Confidence: 0.85, Box: [729.1976928710938, 179.03817749023438, 767.2413330078125, 212.75701904296875]
+Class: Car, Confidence: 0.75, Box: [797.7905883789062, 192.9561004638672, 919.2752075195312, 289.7978515625]
+Class: Car, Confidence: 0.71, Box: [623.2647094726562, 180.2900390625, 658.6041259765625, 205.73397827148438]
+
+------------------------------------------------------------------------
+IMAGE: 000496.png
+------------------------------------------------------------------------
+Stage-1 inference time: 76.69 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 2
+Class: Pedestrian, Confidence: 0.63, Box: [464.69482421875, 155.9591064453125, 493.4234313964844, 234.6834716796875]
+Class: Pedestrian, Confidence: 0.50, Box: [653.5802612304688, 158.59962463378906, 680.3552856445312, 234.8560791015625]
+
+Escalated stage-1 detection #0 (Pedestrian, conf=0.6322)
+Crop box used for stage-2: [np.int64(432), np.int64(123), np.int64(525), np.int64(266)] (pad=32)
+Stage-2 inference time: 93.57 ms
+Stage-2 best detection: Pedestrian (conf=0.7468, delta=+0.1147)
+Final decision: Pedestrian (0.7468) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #1 (Pedestrian, conf=0.4973)
+Crop box used for stage-2: [np.int64(621), np.int64(126), np.int64(712), np.int64(266)] (pad=32)
+Stage-2 inference time: 94.62 ms
+Stage-2 best detection: Pedestrian (conf=0.8623, delta=+0.3651)
+Final decision: Pedestrian (0.8623) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+------------------------------------------------------------------------
+IMAGE: 000499.png
+------------------------------------------------------------------------
+Stage-1 inference time: 70.65 ms
+Stage-1 detections kept after filtering: 0
+Escalated detections: 0
+No detections.
+
+------------------------------------------------------------------------
+IMAGE: 000510.png
+------------------------------------------------------------------------
+Stage-1 inference time: 74.29 ms
+Stage-1 detections kept after filtering: 9
+Escalated detections: 2
+Class: Car, Confidence: 0.94, Box: [648.5191040039062, 177.08038330078125, 736.139892578125, 250.39772033691406]
+Class: Car, Confidence: 0.94, Box: [884.106689453125, 165.75946044921875, 1035.874267578125, 255.5165557861328]
+Class: Car, Confidence: 0.94, Box: [0.8482239246368408, 208.9205322265625, 281.3099670410156, 350.4530334472656]
+Class: Car, Confidence: 0.88, Box: [860.316162109375, 170.1615753173828, 947.1083984375, 229.8764190673828]
+Class: Car, Confidence: 0.86, Box: [1132.6156005859375, 168.59654235839844, 1242.0, 373.49725341796875]
+Class: Car, Confidence: 0.83, Box: [840.7181396484375, 165.29141235351562, 895.3197631835938, 210.86270141601562]
+Class: Car, Confidence: 0.78, Box: [714.3035888671875, 179.85581970214844, 755.8170166015625, 216.92431640625]
+Class: Car, Confidence: 0.38, Box: [832.4336547851562, 165.8886260986328, 877.113037109375, 204.77598571777344]
+Class: Car, Confidence: 0.32, Box: [825.3200073242188, 167.31216430664062, 866.5298461914062, 198.54434204101562]
+
+Escalated stage-1 detection #7 (Car, conf=0.3792)
+Crop box used for stage-2: [np.int64(800), np.int64(133), np.int64(909), np.int64(236)] (pad=32)
+Stage-2 inference time: 94.74 ms
+Stage-2 best detection: Car (conf=0.6056, delta=+0.2264)
+Final decision: Car (0.6056) | reason=agree | stage1=Car -> stage2=Car
+
+Escalated stage-1 detection #8 (Car, conf=0.3208)
+Crop box used for stage-2: [np.int64(793), np.int64(135), np.int64(898), np.int64(230)] (pad=32)
+Stage-2 inference time: 92.08 ms
+Stage-2 best detection: Car (conf=0.6878, delta=+0.3669)
+Final decision: Car (0.6878) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000520.png
+------------------------------------------------------------------------
+Stage-1 inference time: 69.08 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Pedestrian, Confidence: 0.85, Box: [699.6862182617188, 158.68484497070312, 755.6797485351562, 300.3809509277344]
+
+------------------------------------------------------------------------
+IMAGE: 000524.png
+------------------------------------------------------------------------
+Stage-1 inference time: 68.68 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 1
+Class: Car, Confidence: 0.92, Box: [599.137939453125, 175.2283477783203, 627.135498046875, 203.99517822265625]
+Class: Car, Confidence: 0.89, Box: [388.3700866699219, 184.39971923828125, 444.52239990234375, 220.2518768310547]
+Class: Car, Confidence: 0.56, Box: [0.0, 199.82325744628906, 33.556522369384766, 309.85638427734375]
+
+Escalated stage-1 detection #2 (Car, conf=0.5599)
+Crop box used for stage-2: [0, np.int64(167), np.int64(65), np.int64(341)] (pad=32)
+Stage-2 inference time: 100.66 ms
+Stage-2 best detection: Car (conf=0.2565, delta=-0.3035)
+Final decision: Car (0.2565) | reason=agree | stage1=Car -> stage2=Car
+
+------------------------------------------------------------------------
+IMAGE: 000526.png
+------------------------------------------------------------------------
+Stage-1 inference time: 68.22 ms
+Stage-1 detections kept after filtering: 1
+Escalated detections: 0
+Class: Car, Confidence: 0.82, Box: [545.9697875976562, 173.89776611328125, 573.7374877929688, 194.98226928710938]
+
+------------------------------------------------------------------------
+IMAGE: 000535.png
+------------------------------------------------------------------------
+Stage-1 inference time: 71.57 ms
+Stage-1 detections kept after filtering: 15
+Escalated detections: 9
+Class: Car, Confidence: 0.86, Box: [958.4352416992188, 181.233642578125, 1067.70849609375, 229.414306640625]
+Class: Car, Confidence: 0.83, Box: [1034.291259765625, 183.19879150390625, 1157.5108642578125, 231.5851287841797]
+Class: Car, Confidence: 0.80, Box: [1099.0576171875, 184.2948760986328, 1222.4969482421875, 230.3925018310547]
+Class: Pedestrian, Confidence: 0.75, Box: [668.544189453125, 151.22021484375, 719.7530517578125, 291.6979064941406]
+Class: Pedestrian, Confidence: 0.71, Box: [272.6367492675781, 155.68418884277344, 293.8515625, 212.3048858642578]
+Class: Pedestrian, Confidence: 0.71, Box: [482.5353698730469, 160.17127990722656, 535.3217163085938, 293.33538818359375]
+Class: Pedestrian, Confidence: 0.68, Box: [524.0108642578125, 165.49754333496094, 582.5802001953125, 284.8553161621094]
+Class: Car, Confidence: 0.68, Box: [591.0264282226562, 171.56761169433594, 639.8572998046875, 204.89930725097656]
+Class: Pedestrian, Confidence: 0.67, Box: [703.8707275390625, 157.1458282470703, 761.447509765625, 285.33514404296875]
+Class: Pedestrian, Confidence: 0.67, Box: [395.2091064453125, 155.4747772216797, 446.0185241699219, 268.8333435058594]
+Class: Pedestrian, Confidence: 0.60, Box: [249.0026092529297, 153.72337341308594, 269.88812255859375, 200.9333038330078]
+Class: Pedestrian, Confidence: 0.53, Box: [562.3977661132812, 161.5029296875, 617.4834594726562, 282.1171875]
+Class: Pedestrian, Confidence: 0.53, Box: [424.7930908203125, 162.48638916015625, 468.4760437011719, 259.6942443847656]
+Class: Pedestrian, Confidence: 0.52, Box: [463.8628234863281, 164.2815704345703, 505.6052551269531, 262.6345520019531]
+Class: Cyclist, Confidence: 0.48, Box: [391.9975891113281, 157.41802978515625, 443.9079895019531, 266.582275390625]
+
+Escalated stage-1 detection #6 (Pedestrian, conf=0.6808)
+Crop box used for stage-2: [np.int64(492), np.int64(133), np.int64(614), np.int64(316)] (pad=32)
+Stage-2 inference time: 92.06 ms
+Stage-2 best detection: Pedestrian (conf=0.9099, delta=+0.2291)
+Final decision: Pedestrian (0.9099) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #7 (Car, conf=0.6802)
+Crop box used for stage-2: [np.int64(559), np.int64(139), np.int64(671), np.int64(236)] (pad=32)
+Stage-2 inference time: 96.21 ms
+Stage-2 best detection: Pedestrian (conf=0.8036, delta=+0.1234)
+Final decision: Car (0.6802) | reason=kept_stage1 | stage1=Car -> stage2=Pedestrian
+
+Escalated stage-1 detection #8 (Pedestrian, conf=0.6686)
+Crop box used for stage-2: [np.int64(671), np.int64(125), np.int64(793), np.int64(317)] (pad=32)
+Stage-2 inference time: 94.72 ms
+Stage-2 best detection: Pedestrian (conf=0.8936, delta=+0.2249)
+Final decision: Pedestrian (0.8936) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #9 (Pedestrian, conf=0.6666)
+Crop box used for stage-2: [np.int64(363), np.int64(123), np.int64(478), np.int64(300)] (pad=32)
+Stage-2 inference time: 102.45 ms
+Stage-2 best detection: Pedestrian (conf=0.8918, delta=+0.2253)
+Final decision: Pedestrian (0.8918) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #10 (Pedestrian, conf=0.5980)
+Crop box used for stage-2: [np.int64(217), np.int64(121), np.int64(301), np.int64(232)] (pad=32)
+Stage-2 inference time: 88.69 ms
+Stage-2 best detection: Pedestrian (conf=0.8222, delta=+0.2242)
+Final decision: Pedestrian (0.8222) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #11 (Pedestrian, conf=0.5306)
+Crop box used for stage-2: [np.int64(530), np.int64(129), np.int64(649), np.int64(314)] (pad=32)
+Stage-2 inference time: 97.06 ms
+Stage-2 best detection: Pedestrian (conf=0.8984, delta=+0.3679)
+Final decision: Pedestrian (0.8984) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #12 (Pedestrian, conf=0.5284)
+Crop box used for stage-2: [np.int64(392), np.int64(130), np.int64(500), np.int64(291)] (pad=32)
+Stage-2 inference time: 96.96 ms
+Stage-2 best detection: Pedestrian (conf=0.8706, delta=+0.3422)
+Final decision: Pedestrian (0.8706) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #13 (Pedestrian, conf=0.5229)
+Crop box used for stage-2: [np.int64(431), np.int64(132), np.int64(537), np.int64(294)] (pad=32)
+Stage-2 inference time: 94.40 ms
+Stage-2 best detection: Pedestrian (conf=0.8274, delta=+0.3044)
+Final decision: Pedestrian (0.8274) | reason=agree | stage1=Pedestrian -> stage2=Pedestrian
+
+Escalated stage-1 detection #14 (Cyclist, conf=0.4776)
+Crop box used for stage-2: [np.int64(359), np.int64(125), np.int64(475), np.int64(298)] (pad=32)
+Stage-2 inference time: 94.95 ms
+Stage-2 best detection: Pedestrian (conf=0.8830, delta=+0.4054)
+Final decision: Pedestrian (0.8830) | reason=similar_class_relabel | stage1=Cyclist -> stage2=Pedestrian
+
+------------------------------------------------------------------------
+IMAGE: 000542.png
+------------------------------------------------------------------------
+Stage-1 inference time: 66.62 ms
+Stage-1 detections kept after filtering: 3
+Escalated detections: 0
+Class: Car, Confidence: 0.92, Box: [363.26953125, 184.58609008789062, 485.7062072753906, 268.6353759765625]
+Class: Car, Confidence: 0.83, Box: [297.5546569824219, 180.57472229003906, 346.7180480957031, 208.0554656982422]
+Class: Car, Confidence: 0.82, Box: [536.2464599609375, 182.16622924804688, 561.1571044921875, 202.87326049804688]
+
+========================================================================
+PIPELINE SUMMARY
+========================================================================
+Images processed: 100
+Stage-1 detections kept: 463
+Escalated detections: 145 (31.32%)
+Stage-2 improved confidence: 94 (64.83% of escalations)
+Stage-2 returned no detection: 37
+Stage-2 agreed with stage 1: 98
+Accepted relabels: 3
+Rejected relabels: 7
+Rejected similar-class relabels: 2
+Average stage-1 inference time: 76.88 ms/image
+Average stage-2 inference time: 98.36 ms/crop
+Average stage-1 confidence (all detections): 0.7449
+Average stage-1 confidence (escalated only): 0.4753
+Average stage-2 best confidence: 0.7490
+Average confidence delta (stage2 - stage1): 0.2658
+Total wall-clock time: 22084.01 ms
+========================================================================

@@ -1,0 +1,36 @@
+Loading yolov8n_640_openvino_model/ for OpenVINO inference...
+Using OpenVINO LATENCY mode for batch=1 inference on CPU...
+Loading yolov8m_320_openvino_model/ for OpenVINO inference...
+Using OpenVINO LATENCY mode for batch=1 inference on CPU...
+
+------------------------------------------------------------------------
+IMAGE: 000003.png
+------------------------------------------------------------------------
+Loading yolov8n_640_openvino_model/ for OpenVINO inference...
+Using OpenVINO LATENCY mode for batch=1 inference on CPU...
+Stage-1 inference time: 214.15 ms
+Stage-1 detections kept after filtering: 2
+Escalated detections: 0
+Class: Car, Confidence: 0.93, Box: [614.5402221679688, 182.02468872070312, 724.71484375, 285.5214538574219]
+Class: Car, Confidence: 0.85, Box: [0.09764420986175537, 211.23190307617188, 226.1479949951172, 374.0467224121094]
+
+========================================================================
+PIPELINE SUMMARY
+========================================================================
+Images processed: 1
+Stage-1 detections kept: 2
+Escalated detections: 0 (0.00%)
+Stage-2 improved confidence: 0 (0.00% of escalations)
+Stage-2 returned no detection: 0
+Stage-2 agreed with stage 1: 0
+Accepted relabels: 0
+Rejected relabels: 0
+Rejected similar-class relabels: 0
+Average stage-1 inference time: 214.15 ms/image
+Average stage-2 inference time: 0.00 ms/crop
+Average stage-1 confidence (all detections): 0.8898
+Average stage-1 confidence (escalated only): 0.0000
+Average stage-2 best confidence: 0.0000
+Average confidence delta (stage2 - stage1): 0.0000
+Total wall-clock time: 214.85 ms
+========================================================================
