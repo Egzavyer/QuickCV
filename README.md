@@ -132,7 +132,7 @@ The dataset (~6 GB) is hosted on Kaggle at [xavierlermusieaux/kitti-yolo](https:
 python src/download_dataset.py
 ```
 
-This downloads and arranges the data into the `yolo/{images,labels}/{train,val}` layout expected by `yolo/data.yaml`. The script uses the Kaggle API, which needs a free [Kaggle API token](https://www.kaggle.com/docs/api); alternatively, download the archive directly from the [dataset page](https://www.kaggle.com/datasets/xavierlermusieaux/kitti-yolo) (no token required) and extract it into `yolo/`.
+This downloads and arranges the data into the `yolo/{images,labels}/{train,val}` layout expected by `yolo/data.yaml`. The script uses the Kaggle API, which needs a free [Kaggle API token](https://www.kaggle.com/docs/api); alternatively, download the archive directly from the [dataset page](https://www.kaggle.com/datasets/xavierlermusieaux/kitti-yolo) (no token required) and extract it into `yolo/`. See [`DATASET.md`](DATASET.md) for the class distribution, format, and licensing.
 
 ---
 
