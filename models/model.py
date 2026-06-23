@@ -6,6 +6,8 @@ from typing import Any
 import torch
 from ultralytics import YOLO  # type: ignore
 
+from .geometry import get_area, pad_box
+
 
 class PredictionResult:
     def __init__(self, results) -> None:
@@ -34,7 +36,7 @@ class Model:
     ) -> None:
         self.model = YOLO(model_path, task="detect")
         self.model_path = model_path
-        self.last_prediction = None
+        self.last_prediction: Any = None
         self.last_result: PredictionResult | None = None
 
         self.MIN_CONFIDENCE_THRESHOLD = min_confidence_threshold
@@ -84,14 +86,12 @@ class Model:
             return
 
         device = boxes.data.device
-        keep_mask_list: list[bool] = []
-
-        for box in self.last_result.coords:
-            keep_mask_list.append(float(get_area(box)) >= float(self.MIN_BOX_AREA))
-
-        keep_mask = torch.tensor(keep_mask_list, dtype=torch.bool, device=device)
-        filtered_data = boxes.data[keep_mask]
-        self.last_prediction.update(boxes=filtered_data)
+        keep_mask = torch.tensor(
+            [get_area(box) >= self.MIN_BOX_AREA for box in self.last_result.coords],
+            dtype=torch.bool,
+            device=device,
+        )
+        self.last_prediction.update(boxes=boxes.data[keep_mask])
         self.last_result = PredictionResult(self.last_prediction)
 
     def eval(self) -> list[dict[str, Any]]:
@@ -111,16 +111,18 @@ class Model:
             if score >= self.MIN_CONFIDENCE_THRESHOLD:
                 continue
 
-            x1, y1, x2, y2 = self.last_result.coords[i].cpu().numpy().astype(int)
-            box_w = max(1, x2 - x1)
-            box_h = max(1, y2 - y1)
-            dynamic_pad = int(round(max(box_w, box_h) * self.CROP_PADDING_RATIO))
-            pad = max(self.BOX_ENLARGEMENT, dynamic_pad)
-
-            x1_pad = max(0, x1 - pad)
-            y1_pad = max(0, y1 - pad)
-            x2_pad = min(image_w, x2 + pad)
-            y2_pad = min(image_h, y2 + pad)
+            box = self.last_result.coords[i].cpu().tolist()
+            x1_pad, y1_pad, x2_pad, y2_pad = pad_box(
+                box,
+                image_width=image_w,
+                image_height=image_h,
+                min_pad=self.BOX_ENLARGEMENT,
+                pad_ratio=self.CROP_PADDING_RATIO,
+            )
+            pad = max(
+                self.BOX_ENLARGEMENT,
+                int(round(max(box[2] - box[0], box[3] - box[1]) * self.CROP_PADDING_RATIO)),
+            )
 
             if x2_pad <= x1_pad or y2_pad <= y1_pad:
                 continue
@@ -134,7 +136,7 @@ class Model:
                 {
                     "index": i,
                     "crop": crop,
-                    "box": self.last_result.coords[i].cpu().tolist(),
+                    "box": box,
                     "class_id": class_id,
                     "class_name": self.class_dict.get(class_id, str(class_id)),
                     "confidence": score,
@@ -186,7 +188,10 @@ class Model:
             return
 
         for box, cls_id, conf in zip(
-            self.last_result.coords, self.last_result.class_ids, self.last_result.scores
+            self.last_result.coords,
+            self.last_result.class_ids,
+            self.last_result.scores,
+            strict=False,
         ):
             class_id = int(cls_id)
             print(
@@ -197,9 +202,3 @@ class Model:
 
         if show:
             self.last_prediction.show()
-
-
-def get_area(box) -> float:
-    w = float(box[2] - box[0])
-    h = float(box[3] - box[1])
-    return max(0.0, w) * max(0.0, h)

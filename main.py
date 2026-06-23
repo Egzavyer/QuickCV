@@ -8,13 +8,7 @@ from typing import TypedDict
 
 import cv2  # type: ignore
 
-from models.Model import Model
-
-
-SIMILAR_CLASS_PAIRS = {
-    ("Cyclist", "Pedestrian"),
-    ("Pedestrian", "Cyclist"),
-}
+from models import Model, choose_final_detection
 
 
 class Metrics(TypedDict):
@@ -89,36 +83,6 @@ def print_summary(metrics: Metrics, total_wall_ms: float) -> None:
 def resolve_images(image_dir: str, image_ids: list[str]) -> list[Path]:
     directory = Path(image_dir)
     return [directory / f"{image_id}.png" for image_id in image_ids]
-
-
-def choose_final_detection(
-    stage1_class: str,
-    stage1_conf: float,
-    best: dict | None,
-    similar_min_conf: float,
-    similar_min_delta: float,
-    general_min_conf: float,
-    general_min_delta: float,
-) -> tuple[str, float, str, str | None]:
-    if best is None:
-        return stage1_class, stage1_conf, "stage2_no_detection", None
-
-    stage2_class = str(best["class_name"])
-    stage2_conf = float(best["confidence"])
-    delta = stage2_conf - stage1_conf
-
-    if stage2_class == stage1_class:
-        return stage2_class, stage2_conf, "agree", stage2_class
-
-    if (stage1_class, stage2_class) in SIMILAR_CLASS_PAIRS:
-        if stage2_conf >= similar_min_conf and delta >= similar_min_delta:
-            return stage2_class, stage2_conf, "similar_class_relabel", stage2_class
-        return stage1_class, stage1_conf, "kept_stage1_similar", stage2_class
-
-    if stage2_conf >= general_min_conf and delta >= general_min_delta:
-        return stage2_class, stage2_conf, "relabel", stage2_class
-
-    return stage1_class, stage1_conf, "kept_stage1", stage2_class
 
 
 def draw_stage2_on_image(image, item: dict, best: dict | None, final: dict):
