@@ -92,6 +92,7 @@ INT8 quantization roughly halves end-to-end latency with no measurable drop in t
 │   ├── benchmark.py            # Warm-up + benchmark harness with summary tables
 │   └── download_dataset.py     # Fetch the KITTI dataset from Kaggle into ./yolo
 ├── tests/                      # Unit tests for decision + geometry logic
+├── samples/images/             # Demo images so the pipeline runs without the dataset
 ├── benchmark_runs/             # Saved benchmark logs and summary table
 ├── runs/                       # Validation curves and annotated sample outputs
 ├── yolo/
@@ -139,19 +140,24 @@ This downloads and arranges the data into the `yolo/{images,labels}/{train,val}`
 
 ### Run the hybrid pipeline (recommended INT8 config)
 
+A handful of demo images ship in `samples/images/`, so the pipeline runs immediately
+after install — no dataset download required:
+
 ```bash
 python main.py \
   --fast-model yolov8n_int8_640_openvino_model/ \
   --slow-model yolov8m_int8_320_openvino_model/ \
-  --image-dir yolo/images/val \
-  --images 006632 006638 006640 \
+  --image-dir samples/images \
+  --images 000021 000048 000058 000076 000100 000103 \
   --threshold 0.7 \
   --stage1-imgsz 640 \
   --stage2-imgsz 320 \
   --save-vis
 ```
 
-Annotated images are written to `runs/hybrid_vis/`. Add `--show` to open them in GUI windows.
+Annotated images are written to `runs/hybrid_vis/`. Add `--show` to open them in GUI
+windows. To run on the full validation split, download the dataset (below) and point
+`--image-dir` at `yolo/images/val`.
 
 ### Train
 

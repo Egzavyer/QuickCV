@@ -248,6 +248,14 @@ def main() -> None:
     }
 
     image_paths = resolve_images(args.image_dir, args.images)
+    if all(not path.exists() for path in image_paths):
+        print(
+            f"\nNo input images found in '{args.image_dir}'. "
+            "Try the bundled demo images in 'samples/images', or download the full "
+            "dataset with 'python src/download_dataset.py'."
+        )
+        return
+
     wall_start = perf_counter()
 
     for image_path in image_paths:
