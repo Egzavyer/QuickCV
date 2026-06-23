@@ -156,8 +156,8 @@ python main.py \
 ```
 
 Annotated images are written to `runs/hybrid_vis/`. Add `--show` to open them in GUI
-windows. To run on the full validation split, download the dataset (below) and point
-`--image-dir` at `yolo/images/val`.
+windows. To run on the full validation split, download the dataset (see Setup) and
+point `--image-dir` at `yolo/images/val`.
 
 ### Train
 

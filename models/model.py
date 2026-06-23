@@ -1,3 +1,5 @@
+"""YOLO/OpenVINO inference wrapper with confidence-gated escalation support."""
+
 from __future__ import annotations
 
 from time import perf_counter
