@@ -1,5 +1,7 @@
 # Hybrid Object Detection for Autonomous Driving
 
+[![CI](https://github.com/Egzavyer/QuickCV/actions/workflows/ci.yml/badge.svg)](https://github.com/Egzavyer/QuickCV/actions/workflows/ci.yml)
+
 A two-stage, confidence-gated object detection pipeline optimized for **real-time CPU inference**. A fast detector runs on every frame; only *uncertain* detections are escalated to a stronger, more expensive model. This recovers accuracy on hard objects while avoiding the cost of running the heavy model on everything.
 
 Trained and evaluated on the **KITTI 2D Object Detection** benchmark (4 classes: Car, Truck, Pedestrian, Cyclist).
@@ -79,18 +81,22 @@ INT8 quantization roughly halves end-to-end latency with no measurable drop in t
 ```text
 .
 ├── main.py                     # Hybrid two-stage inference pipeline
-├── models/
-│   └── Model.py                # YOLO wrapper: prediction, filtering, escalation, crops
+├── models/                     # Detection package
+│   ├── model.py                # YOLO wrapper: prediction, filtering, escalation, crops
+│   ├── decision.py             # Pure stage-1/stage-2 relabeling logic (dependency-free)
+│   └── geometry.py             # Shared 2D geometry helpers (box area, padding)
 ├── src/
 │   ├── train.py                # Training script
 │   ├── validate_models.py      # Validation (precision/recall/mAP, per-class, speed)
 │   ├── export.py               # ONNX / OpenVINO / OpenVINO INT8 export
 │   ├── benchmark.py            # Warm-up + benchmark harness with summary tables
 │   └── download_dataset.py     # Fetch the KITTI dataset from Kaggle into ./yolo
+├── tests/                      # Unit tests for decision + geometry logic
 ├── benchmark_runs/             # Saved benchmark logs and summary table
 ├── runs/                       # Validation curves and annotated sample outputs
 ├── yolo/
 │   └── data.yaml               # Dataset config (4 classes)
+├── pyproject.toml              # Ruff / mypy / pytest configuration
 ├── requirements.txt
 └── *_openvino_model/           # Exported detectors (tracked via Git LFS)
 ```
@@ -197,6 +203,20 @@ Produces per-run logs and `benchmark_runs/summary_table.md`.
 | `--save-vis` / `--show` | Save / display annotated outputs |
 
 ---
+
+## Development
+
+The conservative relabeling rules and geometry helpers are isolated in
+dependency-free modules (`models/decision.py`, `models/geometry.py`) so they can be
+linted, type-checked, and unit-tested without loading the inference stack. CI runs
+on every push:
+
+```bash
+pip install ruff mypy pytest
+ruff check .
+mypy models/decision.py models/geometry.py
+pytest
+```
 
 ## Deployment Notes
 

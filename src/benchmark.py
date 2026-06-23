@@ -106,10 +106,7 @@ def markdown_table(results: dict[str, dict[str, Any]]) -> str:
     ]
     for name, r in results.items():
         esc = r.get('escalated')
-        if isinstance(esc, tuple):
-            esc_text = f'{esc[0]} ({esc[1]:.2f}%)'
-        else:
-            esc_text = 'n/a'
+        esc_text = f'{esc[0]} ({esc[1]:.2f}%)' if isinstance(esc, tuple) else 'n/a'
         lines.append(
             '| ' + ' | '.join([
                 name,
