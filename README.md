@@ -1,136 +1,137 @@
 # Hybrid Object Detection for Autonomous Driving
 
-A two-stage object detection pipeline for CPU-oriented deployment. The system first runs a fast YOLO detector on the full image, then selectively re-checks only low-confidence detections with a stronger second-stage model. The goal is to improve uncertain predictions without paying the cost of running the larger model on every object.
+A two-stage, confidence-gated object detection pipeline optimized for **real-time CPU inference**. A fast detector runs on every frame; only *uncertain* detections are escalated to a stronger, more expensive model. This recovers accuracy on hard objects while avoiding the cost of running the heavy model on everything.
 
-The project was trained and evaluated on a 4-class KITTI-style dataset with the following labels:
+Trained and evaluated on the **KITTI 2D Object Detection** benchmark (4 classes: Car, Truck, Pedestrian, Cyclist).
 
-- Car
-- Truck
-- Pedestrian
-- Cyclist
+**Stack:** Python · PyTorch · Ultralytics YOLOv8 · OpenVINO (INT8 quantization) · ONNX · OpenCV · NumPy
+
+---
+
+## Highlights
+
+- **0.946 mAP@0.5** on the KITTI validation split (per-class AP up to 0.98 on vehicles).
+- **~1.9× faster end-to-end** after OpenVINO INT8 quantization (22.1 s → 11.6 s over 100 images on CPU).
+- **Selective escalation:** the heavy second-stage model runs on only **~31%** of detections, not all of them.
+- **+0.27 mean confidence gain** on escalated detections (0.47 → 0.76) via second-stage re-inspection.
+- **Conservative, class-aware relabeling** prevents the stronger model from corrupting already-correct predictions.
+
+---
+
+## How It Works
+
+```mermaid
+flowchart LR
+    A[Input image] --> B[Stage 1: YOLOv8n full-image detection]
+    B --> C{Confidence < threshold?}
+    C -- No --> F[Keep detection]
+    C -- Yes --> D[Crop padded region around detection]
+    D --> E[Stage 2: YOLOv8m re-inspection]
+    E --> G{Conservative decision logic}
+    G --> F
+```
+
+1. **Stage 1** runs a fast YOLOv8n detector over the full frame.
+2. **Escalation** selects detections whose confidence falls below a threshold.
+3. **Stage 2** crops a padded region around each uncertain detection and re-runs a stronger YOLOv8m model.
+4. **Decision logic** applies confidence/delta gates and special handling for visually similar classes (Cyclist ↔ Pedestrian), so labels only change when the second stage is decisively more confident.
+5. **Outputs** include per-stage timing, confidence deltas, escalation statistics, and optional annotated images.
+
+---
+
+## Results
+
+### Detection accuracy (KITTI validation split)
+
+| Class      | AP@0.5 | Recall |
+| ---------- | ------ | ------ |
+| Car        | 0.983  | 0.97   |
+| Truck      | 0.982  | 0.94   |
+| Cyclist    | 0.937  | 0.91   |
+| Pedestrian | 0.882  | 0.85   |
+| **All**    | **0.946 mAP@0.5** | — |
+
+<p align="center">
+  <img src="runs/detect/val/BoxPR_curve.png" width="48%" alt="Precision-Recall curve" />
+  <img src="runs/detect/val/confusion_matrix_normalized.png" width="48%" alt="Normalized confusion matrix" />
+</p>
+
+### Inference efficiency (100 validation images, CPU)
+
+| Deployment format | Stage-1 latency | Stage-2 latency | End-to-end | Escalation rate | Avg Δconf |
+| ----------------- | --------------- | --------------- | ---------- | --------------- | --------- |
+| OpenVINO (FP)     | 76.9 ms/img     | 98.4 ms/crop    | 22,084 ms  | 31.3%           | +0.27     |
+| **OpenVINO INT8** | **51.0 ms/img** | **42.3 ms/crop**| **11,592 ms** | 32.1%        | +0.27     |
+| **Improvement**   | **−34%**        | **−57%**        | **−47%**   | —               | no loss   |
+
+INT8 quantization roughly halves end-to-end latency with no measurable drop in the confidence gains delivered by the second stage.
+
+### Sample output
+
+<p align="center">
+  <img src="runs/hybrid_vis/annotated_006632.png" width="70%" alt="Annotated hybrid detection output" />
+</p>
+
+---
 
 ## Repository Structure
 
 ```text
 .
-├── main.py                    # Hybrid inference pipeline
+├── main.py                     # Hybrid two-stage inference pipeline
 ├── models/
-│   └── Model.py              # Wrapper around Ultralytics YOLO models
+│   └── Model.py                # YOLO wrapper: prediction, filtering, escalation, crops
 ├── src/
-│   ├── train.py              # Training script
-│   ├── validate_models.py    # Validation script for trained models
-│   ├── export.py             # ONNX/OpenVINO/OpenVINO INT8 export script
-│   └── benchmark.py          # Warm-up + benchmark runner
-├── benchmark_runs/           # Saved benchmark logs and summary table
+│   ├── train.py                # Training script
+│   ├── validate_models.py      # Validation (precision/recall/mAP, per-class, speed)
+│   ├── export.py               # ONNX / OpenVINO / OpenVINO INT8 export
+│   ├── benchmark.py            # Warm-up + benchmark harness with summary tables
+│   └── download_dataset.py     # Fetch the KITTI dataset from Kaggle into ./yolo
+├── benchmark_runs/             # Saved benchmark logs and summary table
+├── runs/                       # Validation curves and annotated sample outputs
+├── yolo/
+│   └── data.yaml               # Dataset config (4 classes)
 ├── requirements.txt
-└── yolo/
-    └── data.yaml             # Dataset config
+└── *_openvino_model/           # Exported detectors (tracked via Git LFS)
 ```
 
-## What the Pipeline Does
-
-1. **Stage 1:** runs a fast detector on the full input image.
-2. **Escalation:** selects detections below a confidence threshold.
-3. **Stage 2:** crops a padded region around each uncertain detection and re-runs a stronger detector.
-4. **Decision logic:** uses a conservative relabel rule so similar classes such as `Cyclist` and `Pedestrian` are not changed too easily.
-5. **Outputs:** prints timing and confidence metrics and can save annotated images for visual inspection.
+---
 
 ## Setup
 
-### 1. Create a virtual environment
+### 1. Clone (with Git LFS)
+
+Model weights are stored with [Git LFS](https://git-lfs.com). Install it once, then clone:
+
+```bash
+git lfs install
+git clone https://github.com/Egzavyer/QuickCV.git
+cd QuickCV
+```
+
+### 2. Create an environment and install dependencies
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate
-```
-
-### 2. Install dependencies
-
-```bash
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Dataset Layout
+### 3. Download the dataset (optional — only needed to train/validate)
 
-The dataset itself is **not included** in this repository. Create a local `yolo/` directory with this structure:
-
-```text
-yolo/
-├── data.yaml
-├── images/
-│   ├── train/
-│   └── val/
-└── labels/
-    ├── train/
-    └── val/
-```
-
-Your `data.yaml` should point to those folders and define the 4 classes:
-
-```yaml
-train: images/train
-val: images/val
-nc: 4
-names:
-  - Car
-  - Truck
-  - Pedestrian
-  - Cyclist
-```
-
-## Training
-
-Train a YOLO model:
+The dataset (~6 GB) is hosted on Kaggle at [xavierlermusieaux/kitti-yolo](https://www.kaggle.com/datasets/xavierlermusieaux/kitti-yolo) and is **not** stored in the repository. Fetch it with:
 
 ```bash
-python src/train.py
+python src/download_dataset.py
 ```
 
-Note: if your local dataset path differs from the one in `src/train.py`, update the `data=` argument first.
+This downloads and arranges the data into the `yolo/{images,labels}/{train,val}` layout expected by `yolo/data.yaml`.
 
-## Validation
+---
 
-Validate one or more trained models on the same dataset:
+## Usage
 
-```bash
-python src/validate_models.py \
-  --models yolov8n.pt yolov8m.pt \
-  --data yolo/data.yaml \
-  --device cpu
-```
-
-This prints precision, recall, mAP50, mAP50-95, per-class mAP50-95, and validation speed.
-
-## Exporting Models
-
-Export trained `.pt` models to deployment formats:
-
-```bash
-python src/export.py \
-  --models yolov8n.pt yolov8m.pt \
-  --onnx \
-  --openvino \
-  --openvino-int8 \
-  --data yolo/data.yaml \
-  --imgsz 640
-```
-
-### Export notes
-
-- Use **OpenVINO** for CPU-oriented deployment.
-- Use **OpenVINO INT8** only after benchmarking on your target hardware.
-- If you want stage 1 and stage 2 to use different input sizes, export them separately at those sizes.
-
-Example:
-
-```bash
-python src/export.py --models yolov8n.pt --openvino-int8 --data yolo/data.yaml --imgsz 640
-python src/export.py --models yolov8m.pt --openvino-int8 --data yolo/data.yaml --imgsz 320
-```
-
-## Running the Hybrid Pipeline
-
-### Example with OpenVINO INT8 models
+### Run the hybrid pipeline (recommended INT8 config)
 
 ```bash
 python main.py \
@@ -139,101 +140,72 @@ python main.py \
   --image-dir yolo/images/val \
   --images 006632 006638 006640 \
   --threshold 0.7 \
-  --min-box-area 0 \
   --stage1-imgsz 640 \
   --stage2-imgsz 320 \
-  --min-pad 32 \
-  --pad-ratio 0.25 \
-  --similar-min-conf 0.85 \
-  --similar-min-delta 0.20 \
-  --general-min-conf 0.75 \
-  --general-min-delta 0.15 \
   --save-vis
 ```
 
-### Important arguments
+Annotated images are written to `runs/hybrid_vis/`. Add `--show` to open them in GUI windows.
 
-- `--fast-model`: model used for stage 1
-- `--slow-model`: model used for stage 2
-- `--threshold`: detections below this confidence are escalated
-- `--stage1-imgsz`: image size for full-image inference
-- `--stage2-imgsz`: image size for crop re-checks
-- `--min-pad`: minimum crop padding in pixels
-- `--pad-ratio`: additional crop padding as a fraction of box size
-- `--save-vis`: saves annotated output images
-- `--show`: opens GUI windows with annotated detections
+### Train
 
-## Benchmarking
+```bash
+python src/train.py
+```
 
-Run a larger benchmark comparing regular OpenVINO and INT8 OpenVINO:
+### Validate
+
+```bash
+python src/validate_models.py --models yolov8n.pt yolov8m.pt --data yolo/data.yaml --device cpu
+```
+
+Reports precision, recall, mAP@0.5, mAP@0.5:0.95, per-class mAP, and validation speed.
+
+### Export to deployment formats
+
+```bash
+python src/export.py \
+  --models yolov8n.pt yolov8m.pt \
+  --onnx --openvino --openvino-int8 \
+  --data yolo/data.yaml --imgsz 640
+```
+
+### Benchmark (FP vs INT8)
 
 ```bash
 python src/benchmark.py \
-  --main-script main.py \
-  --image-dir yolo/images/val \
-  --count 100 \
+  --image-dir yolo/images/val --count 100 \
   --fast-model yolov8n_640_openvino_model/ \
   --slow-model yolov8m_320_openvino_model/ \
   --fast-model-int8 yolov8n_int8_640_openvino_model/ \
   --slow-model-int8 yolov8m_int8_320_openvino_model/ \
-  --threshold 0.7 \
-  --min-box-area 0 \
-  --stage1-imgsz 640 \
-  --stage2-imgsz 320 \
-  --min-pad 32 \
-  --pad-ratio 0.25 \
-  --similar-min-conf 0.85 \
-  --similar-min-delta 0.20 \
-  --general-min-conf 0.75 \
-  --general-min-delta 0.15 \
   --out-dir benchmark_runs
 ```
 
-This produces:
+Produces per-run logs and `benchmark_runs/summary_table.md`.
 
-- per-run log files
-- warm-up logs
-- `benchmark_runs/summary_table.md`
+### Key pipeline arguments
 
-## Example Output
+| Argument | Description |
+| -------- | ----------- |
+| `--fast-model` / `--slow-model` | Stage-1 and stage-2 model paths |
+| `--threshold` | Detections below this confidence are escalated |
+| `--stage1-imgsz` / `--stage2-imgsz` | Inference image size per stage |
+| `--min-pad` / `--pad-ratio` | Crop padding (fixed pixels / fraction of box size) |
+| `--similar-min-conf` / `--similar-min-delta` | Relabel gates for similar classes |
+| `--general-min-conf` / `--general-min-delta` | Relabel gates for other classes |
+| `--save-vis` / `--show` | Save / display annotated outputs |
 
-The pipeline prints:
+---
 
-- number of detections kept by stage 1
-- number of escalations
-- stage-1 and stage-2 inference time
-- confidence gains after stage 2
-- number of no-detection fallback failures
-- end-to-end wall-clock time
+## Deployment Notes
 
-Annotated images are saved to:
-
-```text
-runs/hybrid_vis/
-```
-
-## Current Best Deployment Configuration
-
-On the tested CPU-oriented setup, the best-performing deployment format was:
-
-- **Stage 1:** `yolov8n_int8_640_openvino_model/`
-- **Stage 2:** `yolov8m_int8_320_openvino_model/`
+- **OpenVINO INT8** is the recommended CPU deployment format and powers the headline latency numbers.
+- Stage 1 and stage 2 are exported at different input sizes (640 and 320) to balance recall and speed.
+- The pipeline is UI-agnostic and exposes structured metrics, making it straightforward to wrap in a service or visualization layer.
 
 ## Limitations
 
-- The dataset is not included in the repository.
-- The pipeline was evaluated on CPU; results may differ on GPU or other hardware.
-- The current label space contains only 4 classes.
-- The hybrid system reports confidence-based improvements, but it is not a full autonomous driving perception stack.
-
-## Reproducibility Notes
-
-To reproduce the main results, include:
-
-- the training scripts
-- the dataset config (`yolo/data.yaml`)
-- the final trained weights or a download link
-- the benchmark logs in `benchmark_runs/`
-- the final report PDF
-
-If model files are too large for normal GitHub storage, use **Git LFS** or attach them to a GitHub Release instead of committing them directly.
+- Evaluated on CPU; GPU or other accelerators will produce different latency profiles.
+- The label space covers 4 KITTI classes.
+- The confidence-gain metric reflects second-stage certainty on escalated crops, not a re-validated mAP improvement.

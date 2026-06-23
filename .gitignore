@@ -3,38 +3,28 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.Python
-env/
-venv/
-*.egg-info/
-dist/
-build/
 
-# IDE
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / editor
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Model files (they're large!)
-*.pt
-*.pth
-*.weights
-
-# Data
-data/
-dataset/*
-kitti/
-yolo/images/
-yolo/labels/
-
 # OS
 .DS_Store
 Thumbs.db
 
-# Virtual environments
-venv/
-ENV/
-.*
-*.onnx
-*.pt
+# Dataset (downloaded from Kaggle via src/download_dataset.py; see README)
+yolo/images/
+yolo/labels/
+
+# Ultralytics scratch outputs (curated copies under runs/ are force-added)
+runs/train/
+runs/predict/
+runs/detect/predict*/
