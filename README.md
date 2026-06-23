@@ -235,3 +235,8 @@ pytest
 - Evaluated on CPU; GPU or other accelerators will produce different latency profiles.
 - The label space covers 4 KITTI classes.
 - The confidence-gain metric reflects second-stage certainty on escalated crops, not a re-validated mAP improvement.
+
+## License
+
+Released under the [GNU AGPL-3.0](LICENSE), consistent with the
+[Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) dependency it builds on.
